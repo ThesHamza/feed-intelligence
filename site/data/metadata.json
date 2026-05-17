@@ -1,0 +1,12 @@
+{
+  "last_updated": "2026-05-17T18:09:19.518027+00:00",
+  "articles_shown": 8,
+  "entities_tracked": 8,
+  "totals": {
+    "articles_extracted": 142,
+    "articles_qualified": 87,
+    "articles_classified": 8
+  },
+  "sources_active_7d": 41,
+  "avg_confidence_7d": 87.6
+}

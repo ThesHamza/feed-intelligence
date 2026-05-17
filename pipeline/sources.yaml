@@ -1,11 +1,384 @@
-# Feed Market Intelligence — RSS sources
-# This file is populated in PHASE 1. Each source entry:
-#
-# - name: human-readable identifier
-#   url: full RSS/Atom URL (Google News query URL, Bing News query URL, or direct feed)
-#   type: rss | google_news | bing_news
-#   language: ISO 639-1 (en, fr, es, pt)
+# =============================================================================
+# Feed Market Intelligence — RSS source catalog
+# 56 sources covering: phosphate suppliers, additive suppliers, integrators,
+# commodity markets, regulatory news, multilingual coverage.
+# =============================================================================
+# Each entry:
+#   name:        human-readable identifier (logging)
+#   type:        google_news | bing_news | rss
+#   query:       (google_news/bing_news only) search string
+#   url:         (rss only) direct feed URL
+#   language:    ISO 639-1 (en, fr, es, pt)
 #   region_hint: Americas | Europe | Asia-Pacific | MENA | Africa | Global
-#   query: (optional) the query string used (for Google/Bing News, helpful for debugging)
+# =============================================================================
 
-sources: []
+sources:
+
+  # ---------------------------------------------------------------------------
+  # GOOGLE NEWS — Tier-1 entities (EN)
+  # ---------------------------------------------------------------------------
+  - name: "GN: OCP Group phosphate feed"
+    type: google_news
+    query: '"OCP Group" feed phosphate'
+    language: en
+    region_hint: MENA
+
+  - name: "GN: Mosaic feed phosphate"
+    type: google_news
+    query: '"Mosaic Company" feed phosphate'
+    language: en
+    region_hint: Americas
+
+  - name: "GN: Nutrien phosphate"
+    type: google_news
+    query: 'Nutrien phosphate feed'
+    language: en
+    region_hint: Americas
+
+  - name: "GN: ICL Group phosphate"
+    type: google_news
+    query: '"ICL Group" phosphate feed'
+    language: en
+    region_hint: Global
+
+  - name: "GN: PhosAgro feed"
+    type: google_news
+    query: 'PhosAgro feed phosphate'
+    language: en
+    region_hint: Europe
+
+  - name: "GN: EuroChem phosphate"
+    type: google_news
+    query: 'EuroChem phosphate animal feed'
+    language: en
+    region_hint: Europe
+
+  - name: "GN: Yara phosphate feed"
+    type: google_news
+    query: 'Yara phosphate feed'
+    language: en
+    region_hint: Europe
+
+  - name: "GN: DSM-Firmenich animal nutrition"
+    type: google_news
+    query: '"DSM-Firmenich" animal nutrition'
+    language: en
+    region_hint: Global
+
+  - name: "GN: Cargill animal nutrition"
+    type: google_news
+    query: 'Cargill animal nutrition feed'
+    language: en
+    region_hint: Global
+
+  - name: "GN: ADM feed additives"
+    type: google_news
+    query: 'ADM animal nutrition feed'
+    language: en
+    region_hint: Americas
+
+  - name: "GN: Bunge animal feed"
+    type: google_news
+    query: 'Bunge animal feed'
+    language: en
+    region_hint: Americas
+
+  - name: "GN: Nutreco"
+    type: google_news
+    query: 'Nutreco animal nutrition'
+    language: en
+    region_hint: Europe
+
+  - name: "GN: Alltech"
+    type: google_news
+    query: 'Alltech feed additive'
+    language: en
+    region_hint: Global
+
+  - name: "GN: Adisseo methionine"
+    type: google_news
+    query: 'Adisseo methionine feed'
+    language: en
+    region_hint: Global
+
+  - name: "GN: Novus International"
+    type: google_news
+    query: '"Novus International" feed additive'
+    language: en
+    region_hint: Americas
+
+  - name: "GN: Evonik amino acids"
+    type: google_news
+    query: 'Evonik amino acids feed'
+    language: en
+    region_hint: Europe
+
+  - name: "GN: Ajinomoto lysine feed"
+    type: google_news
+    query: 'Ajinomoto lysine feed'
+    language: en
+    region_hint: Asia-Pacific
+
+  - name: "GN: CJ Bio lysine"
+    type: google_news
+    query: '"CJ Bio" OR "CJ CheilJedang" lysine feed'
+    language: en
+    region_hint: Asia-Pacific
+
+  - name: "GN: Tyson Foods feed"
+    type: google_news
+    query: '"Tyson Foods" feed integration'
+    language: en
+    region_hint: Americas
+
+  - name: "GN: JBS feed"
+    type: google_news
+    query: 'JBS feed nutrition'
+    language: en
+    region_hint: Americas
+
+  # ---------------------------------------------------------------------------
+  # GOOGLE NEWS — Commodities & themes (EN)
+  # ---------------------------------------------------------------------------
+  - name: "GN: monocalcium phosphate"
+    type: google_news
+    query: '"monocalcium phosphate" OR MCP feed'
+    language: en
+    region_hint: Global
+
+  - name: "GN: dicalcium phosphate"
+    type: google_news
+    query: '"dicalcium phosphate" OR DCP feed price'
+    language: en
+    region_hint: Global
+
+  - name: "GN: feed phosphate market"
+    type: google_news
+    query: '"feed phosphate" market price'
+    language: en
+    region_hint: Global
+
+  - name: "GN: feed additives market"
+    type: google_news
+    query: '"feed additives" market trend'
+    language: en
+    region_hint: Global
+
+  - name: "GN: soybean meal price"
+    type: google_news
+    query: 'soybean meal price feed'
+    language: en
+    region_hint: Global
+
+  - name: "GN: corn feed price"
+    type: google_news
+    query: 'corn maize feed price market'
+    language: en
+    region_hint: Global
+
+  - name: "GN: methionine market"
+    type: google_news
+    query: 'methionine feed market price'
+    language: en
+    region_hint: Global
+
+  - name: "GN: enteric methane cattle"
+    type: google_news
+    query: '"enteric methane" cattle feed additive'
+    language: en
+    region_hint: Global
+
+  - name: "GN: African swine fever"
+    type: google_news
+    query: '"African swine fever" feed pork'
+    language: en
+    region_hint: Global
+
+  - name: "GN: avian influenza poultry"
+    type: google_news
+    query: '"avian influenza" poultry feed impact'
+    language: en
+    region_hint: Global
+
+  # ---------------------------------------------------------------------------
+  # BING NEWS — complementary themes (EN)
+  # ---------------------------------------------------------------------------
+  - name: "BN: MDCP feed phosphate"
+    type: bing_news
+    query: 'MDCP feed phosphate'
+    language: en
+    region_hint: Global
+
+  - name: "BN: TCP tricalcium phosphate"
+    type: bing_news
+    query: '"tricalcium phosphate" feed'
+    language: en
+    region_hint: Global
+
+  - name: "BN: lysine feed market"
+    type: bing_news
+    query: 'lysine feed market price'
+    language: en
+    region_hint: Global
+
+  - name: "BN: threonine feed"
+    type: bing_news
+    query: 'threonine feed additive'
+    language: en
+    region_hint: Global
+
+  - name: "BN: mycotoxin feed"
+    type: bing_news
+    query: 'mycotoxin animal feed contamination'
+    language: en
+    region_hint: Global
+
+  - name: "BN: probiotic poultry"
+    type: bing_news
+    query: 'probiotic poultry feed gut health'
+    language: en
+    region_hint: Global
+
+  - name: "BN: feed regulation EU"
+    type: bing_news
+    query: 'EU feed regulation EFSA'
+    language: en
+    region_hint: Europe
+
+  - name: "BN: compound feed Africa"
+    type: bing_news
+    query: 'compound feed Africa poultry market'
+    language: en
+    region_hint: Africa
+
+  - name: "BN: compound feed India"
+    type: bing_news
+    query: 'compound feed India poultry aquaculture'
+    language: en
+    region_hint: Asia-Pacific
+
+  - name: "BN: feed additive innovation"
+    type: bing_news
+    query: 'feed additive innovation phytogenic'
+    language: en
+    region_hint: Global
+
+  - name: "BN: methane reduction dairy"
+    type: bing_news
+    query: 'methane reduction dairy feed 3-NOP Bovaer'
+    language: en
+    region_hint: Global
+
+  # ---------------------------------------------------------------------------
+  # INDUSTRY PUBLICATIONS via Google News site: (more reliable than direct RSS)
+  # ---------------------------------------------------------------------------
+  - name: "Site: FeedNavigator"
+    type: google_news
+    query: 'site:feednavigator.com'
+    language: en
+    region_hint: Global
+
+  - name: "Site: AllAboutFeed"
+    type: google_news
+    query: 'site:allaboutfeed.net'
+    language: en
+    region_hint: Europe
+
+  - name: "Site: Pig Progress"
+    type: google_news
+    query: 'site:pigprogress.net'
+    language: en
+    region_hint: Global
+
+  - name: "Site: Poultry World"
+    type: google_news
+    query: 'site:poultryworld.net'
+    language: en
+    region_hint: Global
+
+  - name: "Site: The Poultry Site"
+    type: google_news
+    query: 'site:thepoultrysite.com'
+    language: en
+    region_hint: Global
+
+  - name: "Site: WattAgNet"
+    type: google_news
+    query: 'site:wattagnet.com'
+    language: en
+    region_hint: Global
+
+  - name: "Site: AgFunderNews"
+    type: google_news
+    query: 'site:agfundernews.com feed OR nutrition'
+    language: en
+    region_hint: Global
+
+  - name: "Site: Feedinfo"
+    type: google_news
+    query: 'site:feedinfo.com'
+    language: en
+    region_hint: Global
+
+  - name: "Site: Reuters commodities feed"
+    type: google_news
+    query: 'site:reuters.com (feed OR soybean OR corn) phosphate OR lysine OR methionine'
+    language: en
+    region_hint: Global
+
+  # ---------------------------------------------------------------------------
+  # MULTILINGUAL — French
+  # ---------------------------------------------------------------------------
+  - name: "GN-FR: alimentation animale"
+    type: google_news
+    query: '"alimentation animale" additifs marché'
+    language: fr
+    region_hint: Europe
+
+  - name: "GN-FR: phosphate alimentaire"
+    type: google_news
+    query: 'phosphate alimentaire MCP DCP'
+    language: fr
+    region_hint: Europe
+
+  - name: "GN-FR: OCP Maroc"
+    type: google_news
+    query: '"OCP" Maroc phosphate'
+    language: fr
+    region_hint: MENA
+
+  - name: "GN-FR: nutrition animale"
+    type: google_news
+    query: '"nutrition animale" innovation additifs'
+    language: fr
+    region_hint: Europe
+
+  # ---------------------------------------------------------------------------
+  # MULTILINGUAL — Spanish
+  # ---------------------------------------------------------------------------
+  - name: "GN-ES: alimentación animal"
+    type: google_news
+    query: '"alimentación animal" aditivos mercado'
+    language: es
+    region_hint: Europe
+
+  - name: "GN-ES: harina de soja"
+    type: google_news
+    query: '"harina de soja" precio mercado'
+    language: es
+    region_hint: Americas
+
+  # ---------------------------------------------------------------------------
+  # MULTILINGUAL — Portuguese
+  # ---------------------------------------------------------------------------
+  - name: "GN-PT: nutrição animal"
+    type: google_news
+    query: '"nutrição animal" aditivos Brasil'
+    language: pt
+    region_hint: Americas
+
+  - name: "GN-PT: farelo soja"
+    type: google_news
+    query: '"farelo de soja" preço'
+    language: pt
+    region_hint: Americas

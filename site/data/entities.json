@@ -1,0 +1,50 @@
+[
+  {
+    "company": "OCP Group",
+    "mentions_30d": 5,
+    "sentiment_avg": 0.8,
+    "last_mention": "2026-05-17T14:09:19.518027+00:00"
+  },
+  {
+    "company": "DSM-Firmenich",
+    "mentions_30d": 4,
+    "sentiment_avg": 1.0,
+    "last_mention": "2026-05-17T06:09:19.518027+00:00"
+  },
+  {
+    "company": "Cargill",
+    "mentions_30d": 4,
+    "sentiment_avg": 0.75,
+    "last_mention": "2026-05-13T18:09:19.518027+00:00"
+  },
+  {
+    "company": "Mosaic",
+    "mentions_30d": 3,
+    "sentiment_avg": 0.67,
+    "last_mention": "2026-05-15T18:09:19.518027+00:00"
+  },
+  {
+    "company": "CJ Bio",
+    "mentions_30d": 2,
+    "sentiment_avg": -0.5,
+    "last_mention": "2026-05-16T18:09:19.518027+00:00"
+  },
+  {
+    "company": "Ajinomoto",
+    "mentions_30d": 2,
+    "sentiment_avg": -0.5,
+    "last_mention": "2026-05-16T18:09:19.518027+00:00"
+  },
+  {
+    "company": "Adisseo",
+    "mentions_30d": 1,
+    "sentiment_avg": 0.0,
+    "last_mention": "2026-05-12T18:09:19.518027+00:00"
+  },
+  {
+    "company": "Tyson Foods",
+    "mentions_30d": 1,
+    "sentiment_avg": 0.0,
+    "last_mention": "2026-05-11T18:09:19.518027+00:00"
+  }
+]

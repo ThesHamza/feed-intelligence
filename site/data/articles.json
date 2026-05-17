@@ -1,0 +1,238 @@
+[
+  {
+    "id": 1,
+    "title": "OCP Group raises feed phosphate exports as Asian demand strengthens",
+    "url": "https://feednavigator.com/sample1",
+    "source": "FeedNavigator",
+    "domain": "feednavigator.com",
+    "date": "2026-05-17T14:09:19.518027+00:00",
+    "lang": "en",
+    "region": "MENA",
+    "body_preview": "OCP Group announced a significant increase in feed phosphate (MCP, MDCP) exports for Q2 2026, citing strong demand from Asia-Pacific markets…",
+    "classification": {
+      "position": "bullish",
+      "tone": "positive",
+      "narrative": "supply",
+      "commodities": [
+        "MCP",
+        "MDCP"
+      ],
+      "regions": [
+        "MENA",
+        "Asia-Pacific"
+      ],
+      "key_companies": [
+        "OCP Group"
+      ],
+      "impact": "high",
+      "confidence": 91,
+      "signal": "OCP expanding phosphate output signals continued tightening of feed phosphate supply.",
+      "time_horizon": "short"
+    }
+  },
+  {
+    "id": 2,
+    "title": "DSM-Firmenich and Cargill expand Bovaer methane reduction partnership in Europe",
+    "url": "https://allaboutfeed.net/sample2",
+    "source": "AllAboutFeed",
+    "domain": "allaboutfeed.net",
+    "date": "2026-05-17T06:09:19.518027+00:00",
+    "lang": "en",
+    "region": "Europe",
+    "body_preview": "DSM-Firmenich announced an expanded partnership with Cargill to deploy Bovaer methane-reducing feed additive across European dairy cooperatives…",
+    "classification": {
+      "position": "bullish",
+      "tone": "positive",
+      "narrative": "sustainability",
+      "commodities": [
+        "other"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "key_companies": [
+        "DSM-Firmenich",
+        "Cargill"
+      ],
+      "impact": "high",
+      "confidence": 94,
+      "signal": "GHG regulatory pull accelerating commercial deployment of methane-reducing feed additives in EU.",
+      "time_horizon": "medium"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Lysine prices ease as CJ Bio and Ajinomoto ramp Asian production",
+    "url": "https://reuters.com/sample3",
+    "source": "Reuters commodities feed",
+    "domain": "reuters.com",
+    "date": "2026-05-16T18:09:19.518027+00:00",
+    "lang": "en",
+    "region": "Asia-Pacific",
+    "body_preview": "Lysine sulfate spot prices declined 8% over the past month as CJ Bio and Ajinomoto increased capacity utilization at their Asian plants…",
+    "classification": {
+      "position": "bearish",
+      "tone": "neutral",
+      "narrative": "supply",
+      "commodities": [
+        "lysine"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "key_companies": [
+        "CJ Bio",
+        "Ajinomoto"
+      ],
+      "impact": "medium",
+      "confidence": 87,
+      "signal": "Lysine supply surge from Asian producers easing feed cost pressure across poultry sector.",
+      "time_horizon": "immediate"
+    }
+  },
+  {
+    "id": 4,
+    "title": "African swine fever resurges in Vietnam — compound feed demand at risk",
+    "url": "https://pigprogress.net/sample4",
+    "source": "Pig Progress",
+    "domain": "pigprogress.net",
+    "date": "2026-05-15T18:09:19.518027+00:00",
+    "lang": "en",
+    "region": "Asia-Pacific",
+    "body_preview": "Vietnam's agriculture ministry confirmed ASF outbreaks in 3 northern provinces, suspending live pig imports…",
+    "classification": {
+      "position": "bearish",
+      "tone": "negative",
+      "narrative": "disease",
+      "commodities": [
+        "soybean",
+        "corn"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "key_companies": [],
+      "impact": "high",
+      "confidence": 89,
+      "signal": "ASF outbreak in Vietnam threatens regional compound feed volumes in H2 2026.",
+      "time_horizon": "short"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Mosaic posts strong Q1 results on feed phosphate strength",
+    "url": "https://feedinfo.com/sample5",
+    "source": "Site: Feedinfo",
+    "domain": "feedinfo.com",
+    "date": "2026-05-15T18:09:19.518027+00:00",
+    "lang": "en",
+    "region": "Americas",
+    "body_preview": "The Mosaic Company reported Q1 2026 revenue beat on stronger-than-expected feed phosphate (MCP, DCP) pricing and steady Brazilian demand…",
+    "classification": {
+      "position": "bullish",
+      "tone": "positive",
+      "narrative": "prices",
+      "commodities": [
+        "MCP",
+        "DCP"
+      ],
+      "regions": [
+        "Americas"
+      ],
+      "key_companies": [
+        "Mosaic"
+      ],
+      "impact": "medium",
+      "confidence": 85,
+      "signal": "Mosaic earnings confirm sustained feed phosphate price premium driven by tight global supply.",
+      "time_horizon": "short"
+    }
+  },
+  {
+    "id": 6,
+    "title": "EU EFSA proposes tighter heavy metals limits in compound feeds",
+    "url": "https://feednavigator.com/sample6",
+    "source": "FeedNavigator",
+    "domain": "feednavigator.com",
+    "date": "2026-05-14T18:09:19.518027+00:00",
+    "lang": "en",
+    "region": "Europe",
+    "body_preview": "The European Food Safety Authority opened a consultation on amended maximum levels for cadmium and lead in compound feeds…",
+    "classification": {
+      "position": "neutral",
+      "tone": "neutral",
+      "narrative": "regulatory",
+      "commodities": [
+        "MCP",
+        "DCP",
+        "other"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "key_companies": [],
+      "impact": "medium",
+      "confidence": 82,
+      "signal": "Stricter EU heavy metals limits could pressure phosphate suppliers to upgrade purification.",
+      "time_horizon": "long"
+    }
+  },
+  {
+    "id": 7,
+    "title": "India compound feed sector growing 15% as government boosts credit",
+    "url": "https://wattagnet.com/sample7",
+    "source": "Site: WattAgNet",
+    "domain": "wattagnet.com",
+    "date": "2026-05-13T18:09:19.518027+00:00",
+    "lang": "en",
+    "region": "Asia-Pacific",
+    "body_preview": "India's Ministry of Agriculture published a 5-year roadmap to develop domestic compound feed capacity, backed by ₹2400 crore in subsidized credit…",
+    "classification": {
+      "position": "bullish",
+      "tone": "positive",
+      "narrative": "demand",
+      "commodities": [
+        "soybean",
+        "corn",
+        "other"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "key_companies": [],
+      "impact": "high",
+      "confidence": 88,
+      "signal": "India structural feed demand acceleration creates 6-12 month entry window for additive suppliers.",
+      "time_horizon": "medium"
+    }
+  },
+  {
+    "id": 8,
+    "title": "Cargill annonce une nouvelle gamme d'additifs pour la santé digestive",
+    "url": "https://example.fr/sample8",
+    "source": "GN-FR: nutrition animale",
+    "domain": "example.fr",
+    "date": "2026-05-13T18:09:19.518027+00:00",
+    "lang": "fr",
+    "region": "Europe",
+    "body_preview": "Cargill a lancé en Europe une nouvelle gamme d'additifs probiotiques ciblant la santé digestive des poulets de chair, avec des résultats cliniques montrant une amélioration de l'indice de consommation…",
+    "classification": {
+      "position": "bullish",
+      "tone": "positive",
+      "narrative": "innovation",
+      "commodities": [
+        "other"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "key_companies": [
+        "Cargill"
+      ],
+      "impact": "medium",
+      "confidence": 86,
+      "signal": "Cargill renforce sa position concurrentielle sur le segment additifs santé digestive en Europe.",
+      "time_horizon": "medium"
+    }
+  }
+]
