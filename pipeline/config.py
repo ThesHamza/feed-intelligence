@@ -32,7 +32,7 @@ SPACY_MODELS = {
 # =============================================================================
 # LLM (Gemini free tier)
 # =============================================================================
-LLM_MODEL = "gemini-2.5-flash"
+LLM_MODEL = "gemini-2.5-flash-lite"
 LLM_TEMPERATURE = 0.2
 LLM_MAX_PARALLEL = 10               # batch size for concurrent classifications
 LLM_INPUT_BODY_CHARS = 1500         # truncate body to first N chars for prompt
@@ -168,7 +168,7 @@ BACKOFF_BASE = 2.0          # exponential backoff for 429
 # =============================================================================
 # Collection window (Phase 1)
 # =============================================================================
-COLLECTION_WINDOW_HOURS = 48
+COLLECTION_WINDOW_HOURS = 720
 
 # =============================================================================
 # Regions (for dashboard choropleth)

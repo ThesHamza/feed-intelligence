@@ -37,50 +37,24 @@ TRACKING_PARAMS = {
 
 
 def _resolve_google_news(url: str) -> str:
-    """Resolve a Google News wrapper URL to the real article URL.
+    """Resolve a Google News wrapper URL using googlenewsdecoder.
 
-    Strategy:
-    1. If URL matches news.google.com/articles/... pattern, try base64 decode
-       (the article ID often contains the original URL).
-    2. Fallback: HTTP HEAD request follows redirects.
+    Modern Google News uses protobuf-encoded article IDs that require
+    a call to its batchexecute endpoint to decode.
     """
     parsed = urlparse(url)
     if "news.google.com" not in parsed.netloc:
         return url
 
-    # Strategy 1: extract from article ID (base64 encoded)
-    m = re.search(r"/articles/([A-Za-z0-9_-]+)", parsed.path)
-    if m:
-        try:
-            article_id = m.group(1)
-            # Google News article IDs are base64url-encoded protobuf
-            padded = article_id + "=" * (-len(article_id) % 4)
-            decoded = base64.urlsafe_b64decode(padded)
-            # Look for http(s):// pattern in decoded bytes
-            url_match = re.search(rb"https?://[^\s\x00-\x1f]+", decoded)
-            if url_match:
-                candidate = url_match.group(0).decode("utf-8", errors="ignore")
-                # Trim at first non-URL char
-                candidate = re.sub(r"[^\w/:.\-?&=%#~+,@!$'*();]+.*$", "", candidate)
-                if candidate.startswith("http"):
-                    return candidate
-        except Exception:  # noqa: BLE001
-            pass
-
-    # Strategy 2: HTTP redirect resolution
     try:
-        resp = requests.head(
-            url,
-            allow_redirects=True,
-            timeout=config.REQUEST_TIMEOUT,
-            headers={"User-Agent": config.USER_AGENT},
-        )
-        if resp.url and "news.google.com" not in urlparse(resp.url).netloc:
-            return resp.url
+        from googlenewsdecoder import gnewsdecoder
+        result = gnewsdecoder(url, interval=1)
+        if isinstance(result, dict) and result.get("status") and result.get("decoded_url"):
+            return result["decoded_url"]
     except Exception as e:  # noqa: BLE001
-        log.debug("HEAD resolve failed for %s: %s", url, e)
+        log.debug("googlenewsdecoder failed for %s: %s", url, e)
 
-    return url  # give up — keep wrapper
+    return url  # give up
 
 
 def _strip_tracking(url: str) -> str:

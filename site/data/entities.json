@@ -1,50 +1,86 @@
 [
   {
+    "company": "Mosaic",
+    "mentions_30d": 6,
+    "sentiment_avg": 0.33,
+    "last_mention": "2026-05-17 19:21:08"
+  },
+  {
     "company": "OCP Group",
     "mentions_30d": 5,
-    "sentiment_avg": 0.8,
-    "last_mention": "2026-05-17T14:09:19.518027+00:00"
+    "sentiment_avg": 0.6,
+    "last_mention": "2026-05-17 19:21:14"
+  },
+  {
+    "company": "Bunge",
+    "mentions_30d": 4,
+    "sentiment_avg": 0.5,
+    "last_mention": "2026-05-17 19:06:35"
   },
   {
     "company": "DSM-Firmenich",
-    "mentions_30d": 4,
-    "sentiment_avg": 1.0,
-    "last_mention": "2026-05-17T06:09:19.518027+00:00"
-  },
-  {
-    "company": "Cargill",
-    "mentions_30d": 4,
-    "sentiment_avg": 0.75,
-    "last_mention": "2026-05-13T18:09:19.518027+00:00"
-  },
-  {
-    "company": "Mosaic",
     "mentions_30d": 3,
-    "sentiment_avg": 0.67,
-    "last_mention": "2026-05-15T18:09:19.518027+00:00"
+    "sentiment_avg": 0.33,
+    "last_mention": "2026-05-17 19:05:45"
   },
   {
-    "company": "CJ Bio",
+    "company": "dsm-firmenich",
+    "mentions_30d": 3,
+    "sentiment_avg": 0.33,
+    "last_mention": "2026-05-17 19:05:34"
+  },
+  {
+    "company": "OCP",
+    "mentions_30d": 3,
+    "sentiment_avg": 1.0,
+    "last_mention": "2026-05-17 19:20:35"
+  },
+  {
+    "company": "Yara",
+    "mentions_30d": 3,
+    "sentiment_avg": 0.33,
+    "last_mention": "2026-05-17 19:21:34"
+  },
+  {
+    "company": "Nutrien",
     "mentions_30d": 2,
-    "sentiment_avg": -0.5,
-    "last_mention": "2026-05-16T18:09:19.518027+00:00"
+    "sentiment_avg": 1.0,
+    "last_mention": "2026-05-17 19:21:27"
   },
   {
-    "company": "Ajinomoto",
-    "mentions_30d": 2,
-    "sentiment_avg": -0.5,
-    "last_mention": "2026-05-16T18:09:19.518027+00:00"
+    "company": "ICL Group",
+    "mentions_30d": 1,
+    "sentiment_avg": 1.0,
+    "last_mention": "2026-05-17 19:04:45"
   },
   {
-    "company": "Adisseo",
+    "company": "Evonik Industries",
     "mentions_30d": 1,
     "sentiment_avg": 0.0,
-    "last_mention": "2026-05-12T18:09:19.518027+00:00"
+    "last_mention": "2026-05-17 19:06:48"
   },
   {
     "company": "Tyson Foods",
     "mentions_30d": 1,
+    "sentiment_avg": 1.0,
+    "last_mention": "2026-05-17 19:07:04"
+  },
+  {
+    "company": "JBS",
+    "mentions_30d": 1,
     "sentiment_avg": 0.0,
-    "last_mention": "2026-05-11T18:09:19.518027+00:00"
+    "last_mention": "2026-05-17 19:19:36"
+  },
+  {
+    "company": "Nutreco",
+    "mentions_30d": 1,
+    "sentiment_avg": 1.0,
+    "last_mention": "2026-05-17 19:19:56"
+  },
+  {
+    "company": "Alltech",
+    "mentions_30d": 1,
+    "sentiment_avg": 1.0,
+    "last_mention": "2026-05-17 19:22:28"
   }
 ]
