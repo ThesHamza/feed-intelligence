@@ -1,0 +1,11 @@
+# Feed Market Intelligence — RSS sources
+# This file is populated in PHASE 1. Each source entry:
+#
+# - name: human-readable identifier
+#   url: full RSS/Atom URL (Google News query URL, Bing News query URL, or direct feed)
+#   type: rss | google_news | bing_news
+#   language: ISO 639-1 (en, fr, es, pt)
+#   region_hint: Americas | Europe | Asia-Pacific | MENA | Africa | Global
+#   query: (optional) the query string used (for Google/Bing News, helpful for debugging)
+
+sources: []
