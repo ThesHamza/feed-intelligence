@@ -1,0 +1,100 @@
+[
+  {
+    "company": "Mosaic",
+    "category": "phosphate_suppliers",
+    "mentions": 6,
+    "sentiment": 0.33,
+    "weighted_impact": 12.0
+  },
+  {
+    "company": "OCP Group",
+    "category": "phosphate_suppliers",
+    "mentions": 5,
+    "sentiment": 0.6,
+    "weighted_impact": 8.0
+  },
+  {
+    "company": "Bunge",
+    "category": "additive_suppliers",
+    "mentions": 4,
+    "sentiment": 0.5,
+    "weighted_impact": 12.0
+  },
+  {
+    "company": "DSM-Firmenich",
+    "category": "additive_suppliers",
+    "mentions": 3,
+    "sentiment": 0.33,
+    "weighted_impact": 9.0
+  },
+  {
+    "company": "dsm-firmenich",
+    "category": "additive_suppliers",
+    "mentions": 3,
+    "sentiment": 0.33,
+    "weighted_impact": 7.5
+  },
+  {
+    "company": "OCP",
+    "category": "phosphate_suppliers",
+    "mentions": 3,
+    "sentiment": 1.0,
+    "weighted_impact": 6.0
+  },
+  {
+    "company": "Yara",
+    "category": "phosphate_suppliers",
+    "mentions": 3,
+    "sentiment": 0.33,
+    "weighted_impact": 7.5
+  },
+  {
+    "company": "Nutrien",
+    "category": "phosphate_suppliers",
+    "mentions": 2,
+    "sentiment": 1.0,
+    "weighted_impact": 4.5
+  },
+  {
+    "company": "ICL Group",
+    "category": "phosphate_suppliers",
+    "mentions": 1,
+    "sentiment": 1.0,
+    "weighted_impact": 1.5
+  },
+  {
+    "company": "Evonik Industries",
+    "category": "other",
+    "mentions": 1,
+    "sentiment": 0.0,
+    "weighted_impact": 1.5
+  },
+  {
+    "company": "Tyson Foods",
+    "category": "integrators",
+    "mentions": 1,
+    "sentiment": 1.0,
+    "weighted_impact": 3.0
+  },
+  {
+    "company": "JBS",
+    "category": "integrators",
+    "mentions": 1,
+    "sentiment": 0.0,
+    "weighted_impact": 0.5
+  },
+  {
+    "company": "Nutreco",
+    "category": "additive_suppliers",
+    "mentions": 1,
+    "sentiment": 1.0,
+    "weighted_impact": 1.5
+  },
+  {
+    "company": "Alltech",
+    "category": "additive_suppliers",
+    "mentions": 1,
+    "sentiment": 1.0,
+    "weighted_impact": 1.5
+  }
+]

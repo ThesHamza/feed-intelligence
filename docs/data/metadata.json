@@ -1,7 +1,8 @@
 {
-  "last_updated": "2026-05-17T19:28:35.094302+00:00",
+  "last_updated": "2026-05-18T14:34:19.492451+00:00",
   "articles_shown": 45,
   "entities_tracked": 14,
+  "signals_count": 30,
   "totals": {
     "articles_extracted": 161,
     "articles_qualified": 116,

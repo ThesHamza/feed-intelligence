@@ -1,84 +1,98 @@
 [
   {
     "company": "Mosaic",
+    "category": "phosphate_suppliers",
     "mentions_30d": 6,
     "sentiment_avg": 0.33,
     "last_mention": "2026-05-17 19:21:08"
   },
   {
     "company": "OCP Group",
+    "category": "phosphate_suppliers",
     "mentions_30d": 5,
     "sentiment_avg": 0.6,
     "last_mention": "2026-05-17 19:21:14"
   },
   {
     "company": "Bunge",
+    "category": "additive_suppliers",
     "mentions_30d": 4,
     "sentiment_avg": 0.5,
     "last_mention": "2026-05-17 19:06:35"
   },
   {
     "company": "DSM-Firmenich",
+    "category": "additive_suppliers",
     "mentions_30d": 3,
     "sentiment_avg": 0.33,
     "last_mention": "2026-05-17 19:05:45"
   },
   {
     "company": "dsm-firmenich",
+    "category": "additive_suppliers",
     "mentions_30d": 3,
     "sentiment_avg": 0.33,
     "last_mention": "2026-05-17 19:05:34"
   },
   {
     "company": "OCP",
+    "category": "phosphate_suppliers",
     "mentions_30d": 3,
     "sentiment_avg": 1.0,
     "last_mention": "2026-05-17 19:20:35"
   },
   {
     "company": "Yara",
+    "category": "phosphate_suppliers",
     "mentions_30d": 3,
     "sentiment_avg": 0.33,
     "last_mention": "2026-05-17 19:21:34"
   },
   {
     "company": "Nutrien",
+    "category": "phosphate_suppliers",
     "mentions_30d": 2,
     "sentiment_avg": 1.0,
     "last_mention": "2026-05-17 19:21:27"
   },
   {
     "company": "ICL Group",
+    "category": "phosphate_suppliers",
     "mentions_30d": 1,
     "sentiment_avg": 1.0,
     "last_mention": "2026-05-17 19:04:45"
   },
   {
     "company": "Evonik Industries",
+    "category": "other",
     "mentions_30d": 1,
     "sentiment_avg": 0.0,
     "last_mention": "2026-05-17 19:06:48"
   },
   {
     "company": "Tyson Foods",
+    "category": "integrators",
     "mentions_30d": 1,
     "sentiment_avg": 1.0,
     "last_mention": "2026-05-17 19:07:04"
   },
   {
     "company": "JBS",
+    "category": "integrators",
     "mentions_30d": 1,
     "sentiment_avg": 0.0,
     "last_mention": "2026-05-17 19:19:36"
   },
   {
     "company": "Nutreco",
+    "category": "additive_suppliers",
     "mentions_30d": 1,
     "sentiment_avg": 1.0,
     "last_mention": "2026-05-17 19:19:56"
   },
   {
     "company": "Alltech",
+    "category": "additive_suppliers",
     "mentions_30d": 1,
     "sentiment_avg": 1.0,
     "last_mention": "2026-05-17 19:22:28"

@@ -1,0 +1,374 @@
+{
+  "commodities": [
+    "MCP",
+    "MDCP",
+    "DCP",
+    "phosphoric_acid",
+    "soybean",
+    "corn",
+    "wheat",
+    "lysine",
+    "methionine",
+    "threonine",
+    "vitamins",
+    "enzymes"
+  ],
+  "regions": [
+    "Americas",
+    "Europe",
+    "Asia-Pacific",
+    "MENA",
+    "Africa",
+    "Global"
+  ],
+  "matrix": [
+    {
+      "commodity": "MCP",
+      "regions": {
+        "Americas": {
+          "count": 1,
+          "sentiment": -1.0
+        },
+        "Europe": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Asia-Pacific": {
+          "count": 1,
+          "sentiment": 1.0
+        },
+        "MENA": {
+          "count": 1,
+          "sentiment": 1.0
+        },
+        "Africa": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 0,
+          "sentiment": 0.0
+        }
+      }
+    },
+    {
+      "commodity": "MDCP",
+      "regions": {
+        "Americas": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Europe": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Asia-Pacific": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "MENA": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Africa": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 0,
+          "sentiment": 0.0
+        }
+      }
+    },
+    {
+      "commodity": "DCP",
+      "regions": {
+        "Americas": {
+          "count": 2,
+          "sentiment": 0.0
+        },
+        "Europe": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Asia-Pacific": {
+          "count": 1,
+          "sentiment": 1.0
+        },
+        "MENA": {
+          "count": 1,
+          "sentiment": 1.0
+        },
+        "Africa": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 2,
+          "sentiment": 1.0
+        }
+      }
+    },
+    {
+      "commodity": "phosphoric_acid",
+      "regions": {
+        "Americas": {
+          "count": 3,
+          "sentiment": 1.0
+        },
+        "Europe": {
+          "count": 1,
+          "sentiment": 1.0
+        },
+        "Asia-Pacific": {
+          "count": 2,
+          "sentiment": 1.0
+        },
+        "MENA": {
+          "count": 4,
+          "sentiment": 0.75
+        },
+        "Africa": {
+          "count": 1,
+          "sentiment": 1.0
+        },
+        "Global": {
+          "count": 5,
+          "sentiment": 1.0
+        }
+      }
+    },
+    {
+      "commodity": "soybean",
+      "regions": {
+        "Americas": {
+          "count": 7,
+          "sentiment": 0.43
+        },
+        "Europe": {
+          "count": 2,
+          "sentiment": 0.0
+        },
+        "Asia-Pacific": {
+          "count": 3,
+          "sentiment": -0.33
+        },
+        "MENA": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Africa": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 4,
+          "sentiment": 0.0
+        }
+      }
+    },
+    {
+      "commodity": "corn",
+      "regions": {
+        "Americas": {
+          "count": 4,
+          "sentiment": 0.0
+        },
+        "Europe": {
+          "count": 2,
+          "sentiment": 0.0
+        },
+        "Asia-Pacific": {
+          "count": 3,
+          "sentiment": -0.33
+        },
+        "MENA": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Africa": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 3,
+          "sentiment": -0.33
+        }
+      }
+    },
+    {
+      "commodity": "wheat",
+      "regions": {
+        "Americas": {
+          "count": 4,
+          "sentiment": 0.0
+        },
+        "Europe": {
+          "count": 2,
+          "sentiment": 0.0
+        },
+        "Asia-Pacific": {
+          "count": 2,
+          "sentiment": 0.0
+        },
+        "MENA": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Africa": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 3,
+          "sentiment": -0.33
+        }
+      }
+    },
+    {
+      "commodity": "lysine",
+      "regions": {
+        "Americas": {
+          "count": 2,
+          "sentiment": 0.5
+        },
+        "Europe": {
+          "count": 2,
+          "sentiment": -0.5
+        },
+        "Asia-Pacific": {
+          "count": 1,
+          "sentiment": 0.0
+        },
+        "MENA": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Africa": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 1,
+          "sentiment": -1.0
+        }
+      }
+    },
+    {
+      "commodity": "methionine",
+      "regions": {
+        "Americas": {
+          "count": 3,
+          "sentiment": 0.67
+        },
+        "Europe": {
+          "count": 2,
+          "sentiment": -0.5
+        },
+        "Asia-Pacific": {
+          "count": 2,
+          "sentiment": 0.5
+        },
+        "MENA": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Africa": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 2,
+          "sentiment": 0.0
+        }
+      }
+    },
+    {
+      "commodity": "threonine",
+      "regions": {
+        "Americas": {
+          "count": 2,
+          "sentiment": 0.5
+        },
+        "Europe": {
+          "count": 2,
+          "sentiment": -0.5
+        },
+        "Asia-Pacific": {
+          "count": 1,
+          "sentiment": 0.0
+        },
+        "MENA": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Africa": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 1,
+          "sentiment": -1.0
+        }
+      }
+    },
+    {
+      "commodity": "vitamins",
+      "regions": {
+        "Americas": {
+          "count": 2,
+          "sentiment": 1.0
+        },
+        "Europe": {
+          "count": 1,
+          "sentiment": 0.0
+        },
+        "Asia-Pacific": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "MENA": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Africa": {
+          "count": 1,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 1,
+          "sentiment": 0.0
+        }
+      }
+    },
+    {
+      "commodity": "enzymes",
+      "regions": {
+        "Americas": {
+          "count": 1,
+          "sentiment": 1.0
+        },
+        "Europe": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Asia-Pacific": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "MENA": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Africa": {
+          "count": 0,
+          "sentiment": 0.0
+        },
+        "Global": {
+          "count": 0,
+          "sentiment": 0.0
+        }
+      }
+    }
+  ]
+}

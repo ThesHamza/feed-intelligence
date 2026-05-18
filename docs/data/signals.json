@@ -1,0 +1,583 @@
+[
+  {
+    "id": 9,
+    "signal": "Soybean meal prices are showing strong bullish resilience, defying broader agricultural commodity declines due to robust global demand, particularly in Asia and Africa, signaling continued strength.",
+    "title": "Los fondos agrícolas tomaron ganancias (previsible), pero a la harina de soja “no le entran las balas”",
+    "url": "https://bichosdecampo.com/los-fondos-agricolas-tomaron-ganancias-previsible-pero-a-la-harina-de-soja-no-le-entran-las-balas",
+    "date": "2026-05-16",
+    "region": "Americas",
+    "position": "bullish",
+    "narrative": "demand",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [],
+    "commodities": [
+      "other"
+    ]
+  },
+  {
+    "id": 7,
+    "signal": "DSM-Firmenich's positive Q1 results and confirmed outlook signal stability and growth in animal nutrition ingredients, suggesting a healthy market for major suppliers.",
+    "title": "dsm-firmenich AG stock (CH1216478797): integration progress and 2024 outlook after first-quarter upd",
+    "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/dsm-firmenich-ag-stock-ch1216478797-integration-progress-and-2024/69345720",
+    "date": "2026-05-15",
+    "region": "Global",
+    "position": "bullish",
+    "narrative": "innovation",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "medium",
+    "companies": [
+      "DSM-Firmenich"
+    ],
+    "commodities": [
+      "other"
+    ]
+  },
+  {
+    "id": 22,
+    "signal": "Tyson's strong Q2 earnings and raised guidance, despite beef headwinds, signal robust demand for feed inputs for other protein segments, indicating stable demand for feed commodities.",
+    "title": "Tyson Foods stock (US9024941034): Q2 earnings jump, guidance raised but beef headwinds persist",
+    "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/tyson-foods-stock-us9024941034-q2-earnings-jump-guidance-raised-but/69343503",
+    "date": "2026-05-15",
+    "region": "Americas",
+    "position": "bullish",
+    "narrative": "prices",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "medium",
+    "companies": [
+      "Tyson Foods"
+    ],
+    "commodities": [
+      "soybean",
+      "corn",
+      "wheat",
+      "lysine",
+      "methionine",
+      "threonine",
+      "vitamins",
+      "enzymes"
+    ]
+  },
+  {
+    "id": 13,
+    "signal": "DSM-Firmenich's Animal Nutrition and Health business is undergoing an acquisition by CVC Capital Partners, signaling potential strategic shifts in the global feed additives market.",
+    "title": "Trade Ministry invites public comments on sale of DSM animal nutrition business",
+    "url": "https://www.modernghana.com/news/1493254/trade-ministry-invites-public-comments-on-sale.html",
+    "date": "2026-05-14",
+    "region": "Global",
+    "position": "neutral",
+    "narrative": "M&A",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "medium",
+    "companies": [
+      "DSM-Firmenich"
+    ],
+    "commodities": [
+      "vitamins",
+      "other"
+    ]
+  },
+  {
+    "id": 17,
+    "signal": "Bunge's strong performance, driven by increasing global demand for biofuels and soybean meal, signals a bullish outlook for soybean-related feed ingredients.",
+    "title": "‘Up and to the right,’ Bunge taps into global biofuel opportunity, demand for soybean meal",
+    "url": "https://www.agtechnavigator.com/Article/2026/05/14/bunge-discusses-biofuel-feed-opportunities-at-bmo-conference",
+    "date": "2026-05-14",
+    "region": "Americas",
+    "position": "bullish",
+    "narrative": "demand",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [
+      "Bunge"
+    ],
+    "commodities": [
+      "soybean"
+    ]
+  },
+  {
+    "id": 12,
+    "signal": "High global multi-mycotoxin contamination levels in feed ingredients will drive increased demand for mycotoxin management solutions and feed additives to safeguard animal health and production.",
+    "title": "dsm-firmenich study highlights high multi-mycotoxin contamination levels in feed ingredients worldwide",
+    "url": "https://www.thecattlesite.com/articles/dsm-firmenich-study-highlights-high-multi-mycotoxin-contamination-levels-in-feed-ingredients-worldwide",
+    "date": "2026-05-13",
+    "region": "Global",
+    "position": "bullish",
+    "narrative": "disease",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "short",
+    "companies": [
+      "dsm-firmenich"
+    ],
+    "commodities": [
+      "other"
+    ]
+  },
+  {
+    "id": 19,
+    "signal": "Bunge's strong global presence in sourcing and processing key feed ingredients like soybeans, corn, and wheat signals stable supply chain operations for livestock feed producers.",
+    "title": "Bunge Global SA stock (US12185T1043): Global agribusiness leader with diversified operations",
+    "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/bunge-global-sa-stock-us12185t1043-global-agribusiness-leader-with/69327017",
+    "date": "2026-05-13",
+    "region": "Americas",
+    "position": "neutral",
+    "narrative": "supply",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [
+      "Bunge"
+    ],
+    "commodities": [
+      "soybean",
+      "corn",
+      "wheat"
+    ]
+  },
+  {
+    "id": 28,
+    "signal": "Study validates safety of Bovaer, a methane-reducing feed additive, supporting its adoption and demand in the European dairy sector amidst regulatory push for sustainability.",
+    "title": "Study finds no evidence of increased cow mortality after Bovaer use",
+    "url": "http://www.bing.com/news/apiclick.aspx?aid=&tid=6a0a0a1d915947c19ecde0c8e6f5abd3&url=https%3a%2f%2fwww.agriland.ie%2ffarming-news%2fstudy-finds-no-evidence-of-increased-cow-mortality-after-bovaer-use%2f&c=17473131056258713935&mkt=ar-xa",
+    "date": "2026-05-13",
+    "region": "Global",
+    "position": "bullish",
+    "narrative": "innovation",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "short",
+    "companies": [],
+    "commodities": [
+      "other"
+    ]
+  },
+  {
+    "id": 15,
+    "signal": "Global feed safety is under severe pressure due to widespread multi-mycotoxin contamination, increasing risks for animal performance and potentially boosting demand for mycotoxin mitigation solutions.",
+    "title": "Global feed survey reveals sharp rise in multi-mycotoxin contamination",
+    "url": "https://www.aquafeed.com/newsroom/reports/global-feed-survey-reveals-sharp-rise-in-multi-mycotoxin-contamination",
+    "date": "2026-05-12",
+    "region": "Global",
+    "position": "bearish",
+    "narrative": "supply",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "immediate",
+    "companies": [
+      "dsm-firmenich"
+    ],
+    "commodities": [
+      "corn",
+      "wheat",
+      "soybean",
+      "other"
+    ]
+  },
+  {
+    "id": 18,
+    "signal": "Bunge's new large-scale soy protein concentrate facility in the US signals increased supply of soy protein ingredients and higher demand for soybeans, supporting growth in animal feed and plant-based protein markets.",
+    "title": "Bunge launches largest soy protein concentrate production facility in the US",
+    "url": "https://ukragroconsult.com/en/news/bunge-launches-largest-soy-protein-concentrate-production-facility-in-the-us",
+    "date": "2026-05-12",
+    "region": "Americas",
+    "position": "bullish",
+    "narrative": "supply",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [
+      "Bunge"
+    ],
+    "commodities": [
+      "soybean",
+      "other"
+    ]
+  },
+  {
+    "id": 27,
+    "signal": "Global methionine market is set for substantial long-term growth, driven by increasing animal feed demand and R&D, especially in Asia-Pacific and North America.",
+    "title": "Methionine Market Size to Hit USD 9.56 Billion by 2035",
+    "url": "https://www.precedenceresearch.com/methionine-market",
+    "date": "2026-05-12",
+    "region": "Global",
+    "position": "bullish",
+    "narrative": "demand",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [],
+    "commodities": [
+      "methionine"
+    ]
+  },
+  {
+    "id": 20,
+    "signal": "Bunge's strong global presence in grains and oilseeds processing and trading signals stable supply chain operations for key animal feed ingredients.",
+    "title": "Bunge Global SA stock (US12185T1043): Leading agribusiness player with global reach",
+    "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/bunge-global-sa-stock-us12185t1043-leading-agribusiness-player-with/69303909",
+    "date": "2026-05-11",
+    "region": "Americas",
+    "position": "neutral",
+    "narrative": "supply",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [
+      "Bunge"
+    ],
+    "commodities": [
+      "soybean",
+      "corn",
+      "wheat"
+    ]
+  },
+  {
+    "id": 25,
+    "signal": "Soybean meal prices in India have surged 25% due to reduced production forecasts, significantly increasing feed costs and threatening poultry sector profitability.",
+    "title": "Soybean meal price surge rattles India’s poultry sector",
+    "url": "https://avinews.com/en/soybean-meal-price-surge-rattles-indias-poultry-sector",
+    "date": "2026-05-11",
+    "region": "Global",
+    "position": "bearish",
+    "narrative": "prices",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "immediate",
+    "companies": [],
+    "commodities": [
+      "soybean",
+      "corn",
+      "other"
+    ]
+  },
+  {
+    "id": 53,
+    "signal": "OCP Group plans significant production capacity increase by 2027, aiming for 20 million tons to meet rising global fertilizer demand.",
+    "title": "Zoom : Morocco - OCP targets 20 million tons by 2027 | Africa24 TV",
+    "url": "https://africa24tv.com/zoom-morocco-ocp-targets-20-million-tons-by-2027",
+    "date": "2026-05-06",
+    "region": "MENA",
+    "position": "bullish",
+    "narrative": "supply",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [
+      "OCP"
+    ],
+    "commodities": [
+      "phosphoric_acid"
+    ]
+  },
+  {
+    "id": 60,
+    "signal": "Geopolitical conflict in Iran threatens global fertilizer supply, potentially reducing crop yields and increasing food prices.",
+    "title": "Yara chief warns Iran conflict could put 10bn meals a week at risk as food price impact looms",
+    "url": "https://www.agtechnavigator.com/Article/2026/05/01/yara-chief-warns-iran-conflict-could-put-10bn-meals-a-week-at-risk-as-food-price-impact-looms",
+    "date": "2026-05-01",
+    "region": "Europe",
+    "position": "bearish",
+    "narrative": "supply",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "medium",
+    "companies": [
+      "Yara"
+    ],
+    "commodities": [
+      "other"
+    ]
+  },
+  {
+    "id": 62,
+    "signal": "Middle East crisis disrupts fertilizer supply, increasing prices and threatening global food security and affordability for farmers.",
+    "title": "Crisis removes half a million tonnes of nitrogen fertiliser",
+    "url": "https://www.gasworld.com/story/crisis-removes-half-a-million-tonnes-of-nitrogen-fertiliser/2248539.article",
+    "date": "2026-05-01",
+    "region": "Europe",
+    "position": "bullish",
+    "narrative": "supply",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "short",
+    "companies": [
+      "Yara"
+    ],
+    "commodities": [
+      "phosphoric_acid"
+    ]
+  },
+  {
+    "id": 54,
+    "signal": "Global feed phosphates market projected for robust growth, driven by increasing demand and strategic M&A activities, particularly in Asia Pacific.",
+    "title": "Feed Phosphates Market Size, Share | Industry Report [2034]",
+    "url": "https://www.fortunebusinessinsights.com/feed-phosphates-market-112519",
+    "date": "2026-04-27",
+    "region": "MENA",
+    "position": "bullish",
+    "narrative": "demand",
+    "impact": "high",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [
+      "Mosaic",
+      "Nutrien",
+      "OCP Group"
+    ],
+    "commodities": [
+      "MCP",
+      "DCP"
+    ]
+  },
+  {
+    "id": 16,
+    "signal": "DSM-Firmenich's steady performance and focus on sustainable and health-related ingredients signal a continued industry shift towards value-added and environmentally conscious feed solutions.",
+    "title": "dsm-firmenich AG stock (CH1216478797): Nutrition and health leader navigates market shifts",
+    "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/dsm-firmenich-ag-stock-ch1216478797-nutrition-and-health-leader/69327158",
+    "date": "2026-05-13",
+    "region": "Global",
+    "position": "neutral",
+    "narrative": "innovation",
+    "impact": "high",
+    "confidence": 90,
+    "time_horizon": "medium",
+    "companies": [
+      "DSM-Firmenich"
+    ],
+    "commodities": [
+      "other"
+    ]
+  },
+  {
+    "id": 42,
+    "signal": "Soaring fertilizer prices and industry consolidation are pushing farmers to a breaking point, signaling potential cost pressures for the feed industry.",
+    "title": "US Senate fertilizer hearing: Farmers ‘can’t take much more’ as prices surge",
+    "url": "https://agfundernews.com/us-senate-fertilizer-hearing-farmers-cant-take-much-more-as-prices-surge",
+    "date": "2026-05-13",
+    "region": "Global",
+    "position": "bearish",
+    "narrative": "prices",
+    "impact": "high",
+    "confidence": 90,
+    "time_horizon": "medium",
+    "companies": [
+      "Mosaic"
+    ],
+    "commodities": [
+      "other"
+    ]
+  },
+  {
+    "id": 50,
+    "signal": "OCP is emphasizing phosphate's role in food security and sustainable animal production, shifting towards solution-based services.",
+    "title": "OCP Positions Phosphate Science at the Center of Food Security at SIAM 2026",
+    "url": "https://northafricapost.com/96485-ocp-positions-phosphate-science-at-the-center-of-food-security-at-siam-2026.html",
+    "date": "2026-05-17",
+    "region": "MENA",
+    "position": "bullish",
+    "narrative": "supply",
+    "impact": "medium",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [
+      "OCP"
+    ],
+    "commodities": [
+      "phosphoric_acid"
+    ]
+  },
+  {
+    "id": 14,
+    "signal": "dsm-firmenich's new Brazil facility signals bullish growth in pet nutrition, increasing vitamin and mineral premix supply for the South American market.",
+    "title": "dsm-firmenich expands pet-dedicated premix production with new facility in Brazil",
+    "url": "https://www.petfoodprocessing.net/articles/20471-dsm-firmenich-expands-pet-dedicated-premix-production-with-new-facility-in-brazil",
+    "date": "2026-05-13",
+    "region": "Global",
+    "position": "bullish",
+    "narrative": "supply",
+    "impact": "medium",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [
+      "dsm-firmenich"
+    ],
+    "commodities": [
+      "vitamins"
+    ]
+  },
+  {
+    "id": 39,
+    "signal": "US meat exports, particularly pork, are forecast to grow significantly through 2035, driven by global demand and EU supply constraints, benefiting related feed sectors.",
+    "title": "US meat exports forecast to grow across all categories",
+    "url": "https://www.thepoultrysite.com/news/2026/05/us-meat-exports-forecast-to-grow-across-all-categories",
+    "date": "2026-05-11",
+    "region": "Global",
+    "position": "bullish",
+    "narrative": "demand",
+    "impact": "medium",
+    "confidence": 95,
+    "time_horizon": "long",
+    "companies": [],
+    "commodities": [
+      "other"
+    ]
+  },
+  {
+    "id": 56,
+    "signal": "Mosaic's stock decline due to analyst downgrade signals potential headwinds for phosphate fertilizer and feed ingredient prices.",
+    "title": "Mosaic Company Stock (US61945C1036): Analyst Downgrade Pushes Shares to New 52-Week Low Ahead of Q1",
+    "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/mosaic-company-stock-us61945c1036-analyst-downgrade-pushes-shares-to/69292399",
+    "date": "2026-05-08",
+    "region": "Americas",
+    "position": "bearish",
+    "narrative": "prices",
+    "impact": "medium",
+    "confidence": 95,
+    "time_horizon": "short",
+    "companies": [
+      "Mosaic"
+    ],
+    "commodities": [
+      "MCP",
+      "DCP"
+    ]
+  },
+  {
+    "id": 115,
+    "signal": "UK poultry farmers welcome lifted free-range housing rules due to reduced avian influenza risk, signaling stabilization and potential recovery for the free-range poultry feed demand.",
+    "title": "UK poultry farmers welcome end of free-range housing rules",
+    "url": "https://www.poultryworld.net/health-nutrition/health/uk-poultry-farmers-relieved-at-lifting-of-housing-order",
+    "date": "2026-04-20",
+    "region": "Global",
+    "position": "bullish",
+    "narrative": "disease",
+    "impact": "medium",
+    "confidence": 95,
+    "time_horizon": "immediate",
+    "companies": [],
+    "commodities": [
+      "other"
+    ]
+  },
+  {
+    "id": 61,
+    "signal": "Strong agricultural market conditions and favorable farm economics are driving global fertilizer demand, benefiting key industry players.",
+    "title": "Zacks Industry Outlook Highlights Nutrien, CF Industries and Yara",
+    "url": "https://www.theglobeandmail.com/investing/markets/stocks/NTR/pressreleases/1416758/zacks-industry-outlook-highlights-nutrien-cf-industries-and-yara",
+    "date": "2026-05-15",
+    "region": "Europe",
+    "position": "bullish",
+    "narrative": "demand",
+    "impact": "medium",
+    "confidence": 90,
+    "time_horizon": "medium",
+    "companies": [
+      "Nutrien",
+      "Yara"
+    ],
+    "commodities": [
+      "phosphoric_acid"
+    ]
+  },
+  {
+    "id": 11,
+    "signal": "ICL Group's strong Q1 results and raised guidance, driven by higher commodity prices, indicate potential upward cost pressures for the animal feed industry.",
+    "title": "ICL Group Q1 Earnings Call Highlights",
+    "url": "https://www.tradingview.com/news/marketbeat:80a5994df094b:0-icl-group-q1-earnings-call-highlights",
+    "date": "2026-05-13",
+    "region": "Global",
+    "position": "bullish",
+    "narrative": "prices",
+    "impact": "medium",
+    "confidence": 90,
+    "time_horizon": "short",
+    "companies": [
+      "ICL Group"
+    ],
+    "commodities": [
+      "other"
+    ]
+  },
+  {
+    "id": 21,
+    "signal": "Evonik's steady performance in specialty chemicals, including amino acids for animal feed, indicates market stability for key additives despite macroeconomic headwinds.",
+    "title": "Evonik Industries stock (DE000EVNK013): German specialty chemicals leader for US portfolios",
+    "url": "https://www.ad-hoc-news.de/boerse/news/ueberblick/evonik-industries-stock-de000evnk013-german-specialty-chemicals-leader/69321972",
+    "date": "2026-05-13",
+    "region": "Europe",
+    "position": "neutral",
+    "narrative": "innovation",
+    "impact": "medium",
+    "confidence": 90,
+    "time_horizon": "medium",
+    "companies": [
+      "Evonik Industries"
+    ],
+    "commodities": [
+      "lysine",
+      "methionine",
+      "threonine"
+    ]
+  },
+  {
+    "id": 26,
+    "signal": "Most amino acid markets are softening due to subdued demand and building inventories, while methionine prices remain firm amidst regional supply uncertainties.",
+    "title": "Amino acid markets soften: All eyes on methionine",
+    "url": "https://www.allaboutfeed.net/animal-feed/feed-additives/amino-acid-markets-cool-down-except-for-methionine",
+    "date": "2026-05-13",
+    "region": "Global",
+    "position": "bearish",
+    "narrative": "prices",
+    "impact": "medium",
+    "confidence": 90,
+    "time_horizon": "short",
+    "companies": [],
+    "commodities": [
+      "lysine",
+      "methionine",
+      "threonine"
+    ]
+  },
+  {
+    "id": 30,
+    "signal": "Vitamin prices have stabilized at elevated levels due to slowing demand and extensive forward contracting, indicating a pause in upward price momentum.",
+    "title": "Vitamin prices hold steady amid slowing demand",
+    "url": "https://www.allaboutfeed.net/animal-feed/feed-additives/vitamin-prices-stay-high-but-level-off-as-demand-slows",
+    "date": "2026-05-13",
+    "region": "Europe",
+    "position": "neutral",
+    "narrative": "demand",
+    "impact": "medium",
+    "confidence": 90,
+    "time_horizon": "medium",
+    "companies": [],
+    "commodities": [
+      "vitamins"
+    ]
+  },
+  {
+    "id": 52,
+    "signal": "OCP Group highlights the critical role of phosphate in enhancing agricultural productivity and food security, showcasing integrated solutions from mining to livestock.",
+    "title": "Morocco’s OCP showcases phosphate-driven solutions for food security",
+    "url": "https://en.hespress.com/136252-moroccos-ocp-showcases-phosphate-driven-solutions-for-food-security.html",
+    "date": "2026-04-21",
+    "region": "MENA",
+    "position": "bullish",
+    "narrative": "supply",
+    "impact": "medium",
+    "confidence": 90,
+    "time_horizon": "long",
+    "companies": [
+      "OCP"
+    ],
+    "commodities": [
+      "phosphoric_acid"
+    ]
+  }
+]

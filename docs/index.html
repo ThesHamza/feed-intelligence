@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feed Market Intelligence — Daily Dashboard</title>
+  <title>Feed Market Intelligence — Dashboard</title>
   <link rel="stylesheet" href="assets/style.css">
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -15,7 +14,7 @@
     <div class="container">
       <div class="brand">
         <h1>Feed Market Intelligence</h1>
-        <p class="tagline">Daily monitoring of global animal feed markets — phosphates, additives, key players</p>
+        <p class="tagline">Phosphates · Amino acids · Additives · Players — global market signals</p>
       </div>
       <div class="meta">
         <span id="last-updated">Loading…</span>
@@ -25,64 +24,122 @@
 
   <main class="container">
 
-    <!-- KPI Cards -->
-    <section class="kpi-grid" aria-label="Key indicators">
+    <!-- ================= KPI BAR ================= -->
+    <section class="kpi-grid">
       <div class="kpi-card">
-        <div class="kpi-label">Articles (7d)</div>
+        <div class="kpi-label">Articles 7d</div>
         <div class="kpi-value" id="kpi-articles">—</div>
-        <div class="kpi-sub" id="kpi-articles-sub">qualified + classified</div>
+        <div class="kpi-sub">classified</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">Entities tracked</div>
         <div class="kpi-value" id="kpi-entities">—</div>
-        <div class="kpi-sub">with mentions in last 30d</div>
+        <div class="kpi-sub">30-day window</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Active signals</div>
+        <div class="kpi-value" id="kpi-signals">—</div>
+        <div class="kpi-sub">high-impact insights</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">Sources active</div>
         <div class="kpi-value" id="kpi-sources">—</div>
-        <div class="kpi-sub">distinct feeds last 7d</div>
+        <div class="kpi-sub">7-day window</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">AI confidence</div>
         <div class="kpi-value" id="kpi-confidence">—</div>
-        <div class="kpi-sub">avg classification score</div>
+        <div class="kpi-sub">avg score</div>
       </div>
     </section>
 
-    <!-- Top row: Map + Positions -->
-    <section class="grid-2">
-      <div class="card">
-        <h2>Geographic coverage</h2>
-        <p class="card-sub">Article mentions by region (last 30 days)</p>
-        <div id="world-map" role="img" aria-label="World choropleth map of mentions"></div>
-      </div>
-      <div class="card">
-        <h2>Market positions</h2>
-        <p class="card-sub">Bullish vs bearish vs neutral, last 30 days</p>
-        <div class="chart-wrap"><canvas id="chart-positions"></canvas></div>
-      </div>
-    </section>
-
-    <!-- Mid row: Entities + Narratives -->
-    <section class="grid-2">
-      <div class="card">
-        <h2>Top entities by mentions</h2>
-        <p class="card-sub">Last 30 days, ranked</p>
-        <div class="chart-wrap"><canvas id="chart-entities"></canvas></div>
-      </div>
-      <div class="card">
-        <h2>Narratives</h2>
-        <p class="card-sub">Dominant themes across articles</p>
-        <div class="chart-wrap"><canvas id="chart-narratives"></canvas></div>
-      </div>
-    </section>
-
-    <!-- Articles table -->
+    <!-- ================= COMMODITY PRICES ================= -->
     <section class="card">
       <div class="card-header-row">
         <div>
-          <h2>Recent articles</h2>
-          <p class="card-sub">Latest qualified & classified items</p>
+          <h2>Commodity prices</h2>
+          <p class="card-sub">Indexed to 100 at start. CBOT futures, last 90 days. <em>Live data from Yahoo Finance.</em></p>
+        </div>
+        <div id="prices-summary" class="prices-summary"></div>
+      </div>
+      <div class="chart-wrap chart-wrap-tall">
+        <canvas id="chart-prices"></canvas>
+      </div>
+    </section>
+
+    <!-- ================= POSITIONING MATRIX ================= -->
+    <div class="grid-2">
+      <div class="card">
+        <h2>Player positioning</h2>
+        <p class="card-sub">Share of voice (mentions) × sentiment. Bubble size = impact-weighted.</p>
+        <div class="chart-wrap chart-wrap-tall">
+          <canvas id="chart-positioning"></canvas>
+        </div>
+        <div class="positioning-legend">
+          <span class="legend-item"><span class="dot" style="background:#3b82f6"></span> Phosphate suppliers</span>
+          <span class="legend-item"><span class="dot" style="background:#16a34a"></span> Additive suppliers</span>
+          <span class="legend-item"><span class="dot" style="background:#ea580c"></span> Integrators</span>
+        </div>
+      </div>
+
+      <!-- ================= HEATMAP ================= -->
+      <div class="card">
+        <h2>Commodity × region heatmap</h2>
+        <p class="card-sub">Mentions count, colored by avg sentiment. Hover for detail.</p>
+        <div id="heatmap" class="heatmap-wrap"></div>
+        <div class="heatmap-legend">
+          <span>Bearish</span>
+          <span class="gradient-bar"></span>
+          <span>Bullish</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SIGNALS STREAM ================= -->
+    <section class="card">
+      <div class="card-header-row">
+        <div>
+          <h2>Market signals</h2>
+          <p class="card-sub">High-impact insights extracted by AI from classified articles.</p>
+        </div>
+        <div class="filters">
+          <select id="signal-filter-impact">
+            <option value="">All impacts</option>
+            <option value="high">High only</option>
+            <option value="medium">Medium</option>
+          </select>
+        </div>
+      </div>
+      <div id="signals-stream" class="signals-stream"></div>
+    </section>
+
+    <!-- ================= POSITIONS TIMELINE + NARRATIVES ================= -->
+    <div class="grid-2">
+      <div class="card">
+        <h2>Market positions trend</h2>
+        <p class="card-sub">Bullish vs bearish article flow, last 30 days.</p>
+        <div class="chart-wrap"><canvas id="chart-positions"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>Narratives</h2>
+        <p class="card-sub">Dominant themes — what's driving the conversation.</p>
+        <div class="chart-wrap"><canvas id="chart-narratives"></canvas></div>
+      </div>
+    </div>
+
+    <!-- ================= TOP ENTITIES ================= -->
+    <section class="card">
+      <h2>Top entities by mention volume</h2>
+      <p class="card-sub">30-day window. Color = sentiment direction.</p>
+      <div class="chart-wrap chart-wrap-tall"><canvas id="chart-entities"></canvas></div>
+    </section>
+
+    <!-- ================= ARTICLES TABLE ================= -->
+    <section class="card">
+      <div class="card-header-row">
+        <div>
+          <h2>Article feed</h2>
+          <p class="card-sub">Source data behind every signal.</p>
         </div>
         <div class="filters">
           <select id="filter-region"><option value="">All regions</option></select>
@@ -106,26 +163,23 @@
             </tr>
           </thead>
           <tbody id="articles-body">
-            <tr><td colspan="8" style="text-align:center;padding:2rem;">Loading articles…</td></tr>
+            <tr><td colspan="8" style="text-align:center;padding:2rem;">Loading…</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="table-footer">
-        <span id="articles-count">—</span>
-      </div>
+      <div class="table-footer"><span id="articles-count">—</span></div>
     </section>
 
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>Pipeline: Google News &amp; Bing News RSS → trafilatura → spaCy NER → Gemini classification → static dashboard. Updated daily at 06:00 UTC.</p>
+      <p>Real-time RSS collection → trafilatura extraction → spaCy NER → Gemini classification → live dashboard. Auto-updated daily at 06:00 UTC.</p>
     </div>
   </footer>
 
-  <!-- App scripts -->
   <script src="assets/charts.js"></script>
-  <script src="assets/map.js"></script>
+  <script src="assets/heatmap.js"></script>
   <script src="assets/dashboard.js"></script>
 </body>
 </html>

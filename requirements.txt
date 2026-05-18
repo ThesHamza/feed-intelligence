@@ -25,5 +25,8 @@ google-genai==1.0.0
 PyYAML==6.0.2
 python-dotenv==1.0.1
 
+# Market prices (free, Yahoo Finance)
+yfinance==0.2.50
+
 # Testing
 pytest==8.3.4
