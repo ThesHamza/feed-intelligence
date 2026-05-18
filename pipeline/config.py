@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT_DIR / "data"
 DB_PATH = DATA_DIR / "feed_intelligence.db"
-SITE_DIR = ROOT_DIR / "site"
+SITE_DIR = ROOT_DIR / "docs"
 SITE_DATA_DIR = SITE_DIR / "data"
 SOURCES_FILE = Path(__file__).resolve().parent / "sources.yaml"
 
