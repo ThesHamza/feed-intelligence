@@ -51,13 +51,21 @@ jobs:
           python -m pipeline.step_04_quality
           python -m pipeline.step_05_classify
           python -m pipeline.step_07_prices
+          python -m pipeline.step_08_competitors
+          python -m pipeline.step_09_regulatory
+          python -m pipeline.step_11_trade_flows || echo "Trade flows skipped (Comtrade may be rate-limited)"
+          python -m pipeline.step_12_geopolitics || echo "Geopolitics skipped (GDELT may be slow)"
+          python -m pipeline.step_13_patents
+          python -m pipeline.step_14_forecasts
+          python -m pipeline.step_15_stakeholders
           python -m pipeline.step_06_export
+          python -m pipeline.step_10_weak_signals
 
       - name: Commit & push updates
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ site/data/
+          git add data/ docs/data/
           if ! git diff --staged --quiet; then
             git commit -m "chore: daily pipeline run $(date -u +%Y-%m-%d)"
             git push

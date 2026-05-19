@@ -32,7 +32,7 @@ SPACY_MODELS = {
 # =============================================================================
 # LLM (Gemini free tier)
 # =============================================================================
-LLM_MODEL = "gemini-2.5-flash-lite"
+LLM_MODEL = "gemini-2.5-flash"
 LLM_TEMPERATURE = 0.2
 LLM_MAX_PARALLEL = 10               # batch size for concurrent classifications
 LLM_INPUT_BODY_CHARS = 1500         # truncate body to first N chars for prompt
@@ -168,7 +168,7 @@ BACKOFF_BASE = 2.0          # exponential backoff for 429
 # =============================================================================
 # Collection window (Phase 1)
 # =============================================================================
-COLLECTION_WINDOW_HOURS = 720
+COLLECTION_WINDOW_HOURS = 48
 
 # =============================================================================
 # Regions (for dashboard choropleth)
@@ -181,3 +181,57 @@ REGIONS = ["Americas", "Europe", "Asia-Pacific", "MENA", "Africa"]
 EXPORT_ARTICLE_LIMIT = 200          # latest qualified+classified articles
 EXPORT_TIMESERIES_DAYS = 30         # rolling window for daily aggregates
 EXPORT_ENTITY_WINDOW_DAYS = 30      # mentions counted within this window
+
+# =============================================================================
+# v3 — Economic Intelligence configuration
+# =============================================================================
+
+# Competitor stock tickers (Yahoo Finance symbols)
+COMPETITOR_STOCKS = {
+    "MOS":    {"name": "Mosaic",       "category": "phosphate_suppliers", "color": "#3b82f6"},
+    "NTR":    {"name": "Nutrien",      "category": "phosphate_suppliers", "color": "#2563eb"},
+    "ICL":    {"name": "ICL Group",    "category": "phosphate_suppliers", "color": "#1e40af"},
+    "CF":     {"name": "CF Industries","category": "phosphate_suppliers", "color": "#60a5fa"},
+    "YAR.OL": {"name": "Yara",         "category": "phosphate_suppliers", "color": "#1e3a8a"},
+    "BG":     {"name": "Bunge",        "category": "additive_suppliers",  "color": "#16a34a"},
+    "ADM":    {"name": "ADM",          "category": "additive_suppliers",  "color": "#22c55e"},
+    "TSN":    {"name": "Tyson Foods",  "category": "integrators",         "color": "#ea580c"},
+    "JBSAY":  {"name": "JBS",          "category": "integrators",         "color": "#f97316"},
+}
+
+# Regulatory RSS sources for the radar
+REGULATORY_FEEDS = [
+    {"name": "EFSA Animal Feed",    "url": "https://www.efsa.europa.eu/en/rss/efsa-animal-feed.xml", "region": "Europe"},
+    {"name": "EUR-Lex animal feed", "url": "https://eur-lex.europa.eu/EN/display-feed.rss?myRssId=NEWS_NEW_FEED_CLASSIFIED&topic=Animal+feed", "region": "Europe"},
+    {"name": "USDA News",           "url": "https://www.usda.gov/rss/latest-news.xml", "region": "Americas"},
+    {"name": "FDA Animal & Vet",    "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/animal-veterinary/rss.xml", "region": "Americas"},
+    {"name": "EFSA all",            "url": "https://www.efsa.europa.eu/en/rss/efsa-news.xml", "region": "Europe"},
+]
+REGULATORY_KEYWORDS = [
+    "feed", "phosphate", "monocalcium", "dicalcium", "MCP", "DCP",
+    "additive", "contaminant", "cadmium", "lead", "heavy metal",
+    "antibiotic", "amino acid", "premix", "compound feed", "labeling",
+]
+
+# Weak signal detection
+WEAK_SIGNAL_WINDOW_DAYS = 14       # rolling baseline for z-score
+WEAK_SIGNAL_ZSCORE_THRESHOLD = 2.0 # alert if z >= 2
+
+# Trade flows (UN Comtrade)
+# HS codes relevant to feed phosphates: 2510 (phosphates), 2835 (phosphates chemical),
+# 2309 (animal feed preparations)
+COMTRADE_HS_CODES = ["2510", "2835", "2309"]
+COMTRADE_REPORTERS = ["504", "842", "643", "156", "276", "356"]  # Morocco, USA, Russia, China, Germany, India
+
+# GDELT geopolitical (events with phosphate/feed/morocco relevance)
+GDELT_THEMES_OF_INTEREST = [
+    "ECON_PRICE", "ECON_TRADE", "ECON_TAX", "ECON_TAXATION",
+    "TRADE_AGREEMENT", "EXPORT", "IMPORT",
+    "AGRICULTURE", "FOOD_SECURITY",
+    "GOV_REGULATION", "WB_2429_ENVIRONMENTAL_REGULATION",
+]
+GDELT_COUNTRIES_OF_INTEREST = ["MO", "US", "CN", "RU", "FR", "DE", "IN", "BR", "TN", "EG", "SA"]
+
+# Forecasting
+FORECAST_HORIZON_DAYS = 30          # how far ahead to forecast
+FORECAST_LOOKBACK_DAYS = 90         # history used for the model

@@ -1,0 +1,222 @@
+{
+  "fetched_at": "2026-05-19T21:49:44.124884+00:00",
+  "count": 22,
+  "alerts": [
+    {
+      "body": "FDA",
+      "region": "Americas",
+      "title": "Pharmacal Issues Nationwide Recall of MG217 Multi-Symptom Treatment Cream & Skin Protectant Eczema Cream Due to Microbial Contamination - fda.gov",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPcnhaeFdKWHNYdV9TcU1sUnM3TDVkSnk1bmY0ZTRacWtJV3AxdWZMMVhBWHNVUWw5MU81cDRIcUhRck9jM3V4MjBwdDNZOVNPdGx3Tkc4a2JDUEpRcGRXdnFpYW5kNmN1OXBwV0lVWDlPLTh4NTAxWWVmSGlOaTZwM3RXUVAtNHZZYXZXbmNfVHNEYXpTRmI3d0lxOHNCVlFJWTRHR0ZEeENSZUZVUExmaklsWC1xcS1SUmZ0NGxhbUpoRlFiQ2hVSDFfODdWRFZTSE1tMkp2Q1JJQkU1eHlKNV9iOG96czk3ZXJ1NFgybjZ0Y09UVU9xQ1Ataw?oc=5",
+      "published_at": "2026-05-12T04:00:00+00:00",
+      "topic": "safety",
+      "severity": "high"
+    },
+    {
+      "body": "FDA",
+      "region": "Americas",
+      "title": "Sun Pharmaceutical Industries, Inc. (Sun Pharma) Initiates Voluntary U.S. Nationwide Recall of DOXOrubicin Hydrochloride Liposome Injection 50mg/25 mL Due To Potential Presence of Glass Particles - fda.gov",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQRUxNVUpkZnNfMWZSanIyV2MzWWtIdGtfbDJudXhzYmN6Q3hCWnBxc0lvOUx0SFlwY0pYOTJtblVBTFAxVzJfRHowbkhPSjQ1dnNKOXg5ajlZNm9xUDl4dmtjckdwMG56N0tKejNwLXRrLXlvZ0pMNnRtbzdaQS1nbFJlVFhpMnlOT1V1NGRxV3ltbkVydjJoWVRLVnlUQnJmb1MwaW5qMmpSUTlaY0JDT0dwelo2N2JFZjZIa0VIX3l4dlJHZkpZdUI1WEdJR2NpTWxoSVgxN2tCQTViWDh4M085SVVPLXl1c2hWZmdPWGxvZWZOd0N4SQ?oc=5",
+      "published_at": "2026-05-13T22:21:00+00:00",
+      "topic": "safety",
+      "severity": "high"
+    },
+    {
+      "body": "USDA",
+      "region": "Americas",
+      "title": "Child Nutrition Programs Income Eligibility Guidelines - USDA Food and Nutrition Service (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE40RjdtWV90UFJLTFFtTUlwYXRyM0thMjZZaHhmTUp6YlB3TUQyWkdJaTVFYW0wMFJHNUhlYTM3M2xKcXY1aG00QU84VUtxcXFNcjlIN3FpN08xVVUtSXRMeXdmT3lYQzBzc1JueTdrelpLWjFR?oc=5",
+      "published_at": "2026-04-09T07:00:00+00:00",
+      "topic": "general",
+      "severity": "medium"
+    },
+    {
+      "body": "China MARA",
+      "region": "Asia-Pacific",
+      "title": "China's 2026-27 Soybean Import Forecast: Growth Driven by Feed Demand - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZTFsLVNydERleGFIc2c4b0ZGV0VPalg5ZjRKOWp0VzFhdm8zSEE3cFM1RFdzOWNvcmMwQ0psOEY5WEJZdndSWVE1VUtrSFZHd0ZLM1ZEc1JTZGlrZTk4RGlpNWtMYVdfdk5zRmdxaUw4UzBKX21rU1Y5ZlV3ZVVZdjBCOVJNZC1vZ2JkZmFwTEt6dFh6UU14LWtzWkdCWkl6bkUtVA?oc=5",
+      "published_at": "2026-03-24T07:00:00+00:00",
+      "topic": "trade",
+      "severity": "low"
+    },
+    {
+      "body": "China MARA",
+      "region": "Asia-Pacific",
+      "title": "Cross-border Food Retail Imports Temporarily Exempt from GACC Registration - CIRS Group",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPcWMtVWUxNzd1QTBHZzEzRjdRdzZZV21BbTZfeHFkaUp0OGtQOVR2VEx1cHdackFrUEVyWmhqZXNCWHQ3TlRrZG92WmppdG4yZ1NHenZ5ZDN0UGdteWhUemRmQzYzU0R4ZEVuVUdkemVEM1N4NWZOM215MkswTi1pMFlDNDUyc05EX3BpVHJWa1cwOWFScS1mSkczdU85NUtFQ2dmeFVjMHpzZFVt?oc=5",
+      "published_at": "2026-03-27T07:00:00+00:00",
+      "topic": "trade",
+      "severity": "low"
+    },
+    {
+      "body": "FAO",
+      "region": "Global",
+      "title": "Call for Interest for the Designation as FAO Reference Centre for Animal Nutrition and Feed - Food and Agriculture Organization",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBPMEZ2azFaNlVKZWZYV0ozMFotTE1scEl2a2pFOGFZdzh0aW96cjJzSWFYZzBFY2lwbTg5QW5ZUTQ0VTlHOVdXM3UzSDBuSGxIXzdkUTBabVdLLXlKTzl4YXNiY2hrS2RQYUJLLXhjZlROdw?oc=5",
+      "published_at": "2026-03-31T07:00:00+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "EFSA",
+      "region": "Europe",
+      "title": "Efficacy of the feed additive consisting of Clostridium butyricum FERM BP‐2789 (Miya‐Gold®) for chickens for fattening, chickens reared for laying and minor poultry species (excluding laying birds) Miyarisan Pharmaceutical Co. Ltd - EFSA",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB5TnVYcEpOOVJ3YnM4dXRVLWFibGxwcUQ5YmUzWHI5MXZJWWVja3NiR1lqdGdvY05qVjdjNVh1UVNjbnVFN3AyZV9qaEQwdHpieWI2ZkVnT3Y0bHhHVTM2Ug?oc=5",
+      "published_at": "2026-03-31T12:00:00+00:00",
+      "topic": "additives",
+      "severity": "low"
+    },
+    {
+      "body": "EU Commission",
+      "region": "Europe",
+      "title": "Frequently Asked Questions - environment.ec.europa.eu",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPLWowR0JBcHdQVTdjYVE5cUZfS2h6RDdGd0lnVWk3X0RsM01teWVPTXAtV3VyUzJiYXppUFNMQU9GQnF2aDRQVlkySDBFT2hRM1NZNU1xZ1JLQ1VnSUZQYTVxVHVKVzBleXprdlBhVXVmMkJ3cVpSQkJVQ3BuUTE2QkhkUlRHUHFoXzA2X0NqeW90S3lSUFJOSG5ZUWZMYWtzMjQyaTlTaDQ4YnVXa05mT1JsLXNzdkpCbzJ4dUJJa0pDLWg1aEJkeDdteXRldUJnLVE?oc=5",
+      "published_at": "2026-04-05T07:00:00+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "China MARA",
+      "region": "Asia-Pacific",
+      "title": "Will the Iran crisis lead to another round of food price spikes? - IFPRI",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZUNfcHlUQk9qOVF4VEVTc1V2Ny1aWWZBd3NvVU9iS2ZzVmwwYk0tYmZCbnJwVjhpMUNUNTFlYlozVE9HNXZWNWtZN2tvSEp2YVY3MXRwOGdiY0QtSWZLZzZoRm5QYnBuaTBTRFZodHVXVng1T2w0NXBZajdKMTgtWVFVN3VsSENuYXd4TFM5TXIzVVBZZEE?oc=5",
+      "published_at": "2026-04-07T07:00:00+00:00",
+      "topic": "heavy_metals",
+      "severity": "low"
+    },
+    {
+      "body": "China MARA",
+      "region": "Asia-Pacific",
+      "title": "Chinese pigs fed new menu as Beijing weans farmers off US soy - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQ2NpcE5zdlhoMmtSdWpRWm52VnUyUDBYT1EzenAwbEg1Vm5JcVNWLU11M0o0U3Bwb3hkV2Z4NktRM21BSVp4dEo2WXFUcGcxeXFLbDhwXzhoeHF6MGltSkhTQWxoZkNSQ19FNFJRR25RM2R0VGFNdTBfU0ZHeVVIa2hvbVRsYXVKb3FmNE92aGdIb1pTWVdNNFk2SWVJYTcwdFhoSEtaNm1YZw?oc=5",
+      "published_at": "2026-04-15T07:00:00+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "USDA",
+      "region": "Americas",
+      "title": "Senior Farmers Market Nutrition Program - USDA Food and Nutrition Service (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1nU0dRTWUyaFlDM25qc1lzTmFDbGMzUjRXdzRVcUJaejNqRkFjZUNTanB6WUNiMzR1ekNzZzJ4Rk5Oa3VLbGsyXzdEZjZFMk1WMUlFeXppQ05mb3ZORDY1dDRuRDFEM1hZNEJMNVVzVzVMU1BLMU9LTWhB?oc=5",
+      "published_at": "2026-04-22T07:00:00+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "Codex Alimentarius",
+      "region": "Global",
+      "title": "CTF / New success story from the Maldives shows a strengthened national food safety system | CODEXALIMENTARIUS - Food and Agriculture Organization",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRTFpZ2NBTEp1ek1JdkdnekpJTFUxTFlHMmlNcDF4cnU1ODRVdjliLXN5MmgwSVFjQ3MwQmtGa3lWQnVjekNBRExSZnpUQkJhdno5QzBNWXhmTjZ1VmVZRmRXajFCTzhOcjZpYWh3ZlFRYVFlTG9hMkpZNXU1bi0xWVpQNzRmZC1LOUY0bDl1MVZVQQ?oc=5",
+      "published_at": "2026-04-27T07:00:00+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "China MARA",
+      "region": "Asia-Pacific",
+      "title": "Feed Phosphates Market Size, Share | Industry Report [2034] - Fortune Business Insights",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1FdlNoVzlsbFY2Q3JFNEQzWXl5WEVsRTNoVzd5cEl4alhtVV9kb2JETUFDUnNpNktHYXZqQW4xR2tKS0pGSGFJUEplZHNjeUVfVzdFZlB1MXU3Y2IxRkw2SkxxQWZsMFk0d2dRbjNwNG1FeHYydlVCUA?oc=5",
+      "published_at": "2026-04-27T07:00:00+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "AAFCO",
+      "region": "Americas",
+      "title": "SRIS Readiness Intake Form - AAFCO",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9zQ3ZSWW43SGpJbVVYSGRqZ1N6SEM4b3RqV19ldUIxdVRKY2owU2JPTzlEM1VKUHBqQ1ZwS3lCVUdOR2tBUlRQZERrbGgtWXJqb20zNQ?oc=5",
+      "published_at": "2026-04-27T13:26:22+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "Codex Alimentarius",
+      "region": "Global",
+      "title": "World Food Safety Day / One month to go! - Food and Agriculture Organization",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPVjJGTEVGRDJaSG5mbWFoWEF2d2dUaXhBVjdYcjV0RUlhVEVFV2J1ZW1JaHJPcXdaUTFmWlZRT0RkeVkwa1RMQ3J5U09DZC1MNEZ4LU9jT01HSlcxdlZsanY0QkhNMnBhV1JTc2pGQ1dwVGJqbkM0eFJWZnJaSUdOU3FMc1ZkdlhUSlFsRE9MeGF5UQ?oc=5",
+      "published_at": "2026-05-05T07:00:00+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "China MARA",
+      "region": "Asia-Pacific",
+      "title": "Ammonium Phosphate Market Size, Share | Growth Report[2034] - Fortune Business Insights",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE53QkpXYmlWbGxWeUpJTFltMFFrQl9GNU5XT1F4WVpWWE1TcUd4QUx1X1lObmw1bzVLcU1TTzB4Yk04TWdvWHVTRUZBeEstTjVubTc2R2tZWDhYc29PLWEtbmJIYW54Y3lBRF9aRVkwMjJWWEJ1ZGFRRWpGVHM?oc=5",
+      "published_at": "2026-05-05T07:00:00+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "China MARA",
+      "region": "Asia-Pacific",
+      "title": "Top 10 Phosphate Countries by Production - Investing News Network",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQV001cTZQaEtzeEZxaEFnanVpZ01BLTNkRWhpRFF0RkFQaGZsb3ZGcjJUS3BtSW1rbFRqbXBSa1dNajVkcXJwdmc4M21Ba0RiaU1CS1ZPVDVMSFI3SHpHdHBIRVkwVjhmQVUtNmtFcHdEWEt2RFE2WUJFdnFaaVdfM2hucVlRQzVvcWhkQ2s2Nmx6ZmpzcVY3SXRxWlJiYnZFelpJQVhVaEtoWURVd2hIRDU2M3dDWWFFLTZ1WHZFOGtBeDlNbG83UGVPSQ?oc=5",
+      "published_at": "2026-05-11T21:55:00+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "USDA",
+      "region": "Americas",
+      "title": "Summer Meals Site Finder - USDA Food and Nutrition Service (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9Ob3dfdVl2Ml9XQXNwUGI2aTlJeWNocnpyOWl5WnlOVXZOR0VMT0VNUTNVUTl4NGY4SDQ3ZDVOcVhfcnVrUHJkZWdkZWlBdWY3eXc?oc=5",
+      "published_at": "2026-05-12T18:35:18+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "EFSA",
+      "region": "Europe",
+      "title": "Ready for EFSA’s new Guidance? Build a fit for purpose feed additive dossier—from microorganism to submission - EFSA",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOMEE5Yy04V0ZQYVkyTF91bkpsamRlbEUtR2hOTjJvNjk2ZnlHS0ZSVmZ6cFBzMko1OGNfQ28ySmdkdTducDRvbHJaLWU1ZWlhZTZiZzZIak9BdUg1LUlCNHB0ODJYYm1sZnZFLTFYSWpwXzlMU05sOWxFc1k2U1g4VFVRUnh4cHNqVF9wQ1ZITl9SX1JnQi1maVdlRWVuVW5JbW51U0JtcmtOU1h6LVVXYk13WnFHZGIzZkZ3aVZiTTJvTDFh?oc=5",
+      "published_at": "2026-05-12T22:28:26+00:00",
+      "topic": "additives",
+      "severity": "low"
+    },
+    {
+      "body": "USDA",
+      "region": "Americas",
+      "title": "World Agricultural Supply and Demand Estimates - USDA (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5WLWVlLWM1YWlncHE4SDNrQy1DaFU1dUdCUF9xRXlUQVYySzRnaEo1aFNZNGF5SU5ZTkV2eFo1UTN5SV9TMEdUOTRxRmFDTURJYjJXeDZObVZCZ1B6ckoyQXoxSnp0SDQ?oc=5",
+      "published_at": "2026-05-13T17:25:20+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "FDA",
+      "region": "Americas",
+      "title": "Early Alert: Anesthesia Machine Issue from Draeger, Inc. - fda.gov",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPY3RvRjRsd01nMDJCcThmQjJzM3lNb2NQaENFOFBoNzRzOEp4eURTQy11YTV3c0ZlQU1QdEhHVlE3dk9KQlFlVnEzcHBSNWtQVE9oN0h3SEZJRFhqYjdYYnNvWDBEcnhsbkQ5NTZ1eFpmd1RmWTZEM0YwYTBXQjQ5bFhzMU53azRGUnZjSjRkRGRZNzdWYkt5emJLY2pXWTdZVTVMaE5pNzJfTzNUT013aERfY05qTWtvakZ5NllwWFNPdw?oc=5",
+      "published_at": "2026-05-15T00:00:00+00:00",
+      "topic": "general",
+      "severity": "low"
+    },
+    {
+      "body": "China MARA",
+      "region": "Asia-Pacific",
+      "title": "China Dog Supplements - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWHJDUjZrRjktMUpabkkxdGpQU1JEblBJOXJxNWJpMEZxWUhralEyME1ZVEtWRnZvdTJjUGwyNDgtWC1yYWxMRHZ4eU1ybVNlb1Ewb0d5N2daczBRY2NDZTlDaEt5QjZ6WUxyREdZbWdhbW5XQTFCSEJwSGJkV1A1dzlOUk5JNldoTk1naXVyTkVKcTZac0VRMThBYktMMXU1Ti1uYQ?oc=5",
+      "published_at": "2026-05-17T00:14:03+00:00",
+      "topic": "general",
+      "severity": "low"
+    }
+  ],
+  "by_region": {
+    "Americas": 8,
+    "Asia-Pacific": 8,
+    "Global": 3,
+    "Europe": 3
+  },
+  "by_severity": {
+    "high": 2,
+    "medium": 1,
+    "low": 19
+  },
+  "by_topic": {
+    "safety": 2,
+    "general": 15,
+    "trade": 2,
+    "additives": 2,
+    "heavy_metals": 1
+  }
+}

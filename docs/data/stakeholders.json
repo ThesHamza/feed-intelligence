@@ -1,0 +1,52 @@
+{
+  "fetched_at": "2026-05-19T21:53:04.214705+00:00",
+  "nodes": [
+    {
+      "id": "OCP Group",
+      "category": "phosphate_suppliers",
+      "mentions": 5
+    },
+    {
+      "id": "Mosaic",
+      "category": "phosphate_suppliers",
+      "mentions": 6
+    },
+    {
+      "id": "Nutrien",
+      "category": "phosphate_suppliers",
+      "mentions": 2
+    },
+    {
+      "id": "Yara",
+      "category": "phosphate_suppliers",
+      "mentions": 3
+    }
+  ],
+  "edges": [
+    {
+      "source": "Mosaic",
+      "target": "OCP Group",
+      "weight": 2
+    },
+    {
+      "source": "Mosaic",
+      "target": "Nutrien",
+      "weight": 1
+    },
+    {
+      "source": "Nutrien",
+      "target": "OCP Group",
+      "weight": 1
+    },
+    {
+      "source": "Nutrien",
+      "target": "Yara",
+      "weight": 1
+    }
+  ],
+  "stats": {
+    "total_entities": 14,
+    "kept_nodes": 4,
+    "kept_edges": 4
+  }
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "type": "commodity",
+    "item": "other",
+    "recent_7d": 22,
+    "baseline_7d_avg": 0.0,
+    "z_score": 22.0,
+    "direction": "spike",
+    "description": "Commodity 'other' mentions spiked: 22 vs baseline 0.0 (z=22.0σ)"
+  },
+  {
+    "type": "narrative",
+    "item": "demand",
+    "recent_7d": 12,
+    "baseline_7d_avg": 0.0,
+    "z_score": 12.0,
+    "direction": "spike",
+    "description": "Narrative 'demand' mentions spiked: 12 vs baseline 0.0 (z=12.0σ)"
+  },
+  {
+    "type": "narrative",
+    "item": "supply",
+    "recent_7d": 12,
+    "baseline_7d_avg": 0.0,
+    "z_score": 12.0,
+    "direction": "spike",
+    "description": "Narrative 'supply' mentions spiked: 12 vs baseline 0.0 (z=12.0σ)"
+  },
+  {
+    "type": "commodity",
+    "item": "phosphoric_acid",
+    "recent_7d": 9,
+    "baseline_7d_avg": 0.0,
+    "z_score": 9.0,
+    "direction": "spike",
+    "description": "Commodity 'phosphoric_acid' mentions spiked: 9 vs baseline 0.0 (z=9.0σ)"
+  },
+  {
+    "type": "commodity",
+    "item": "soybean",
+    "recent_7d": 8,
+    "baseline_7d_avg": 0.0,
+    "z_score": 8.0,
+    "direction": "spike",
+    "description": "Commodity 'soybean' mentions spiked: 8 vs baseline 0.0 (z=8.0σ)"
+  },
+  {
+    "type": "narrative",
+    "item": "innovation",
+    "recent_7d": 8,
+    "baseline_7d_avg": 0.0,
+    "z_score": 8.0,
+    "direction": "spike",
+    "description": "Narrative 'innovation' mentions spiked: 8 vs baseline 0.0 (z=8.0σ)"
+  },
+  {
+    "type": "entity",
+    "item": "Mosaic",
+    "recent_7d": 6,
+    "baseline_7d_avg": 0.0,
+    "z_score": 6.0,
+    "direction": "spike",
+    "description": "Entity 'Mosaic' mentions spiked: 6 vs baseline 0.0 (z=6.0σ)"
+  },
+  {
+    "type": "narrative",
+    "item": "prices",
+    "recent_7d": 6,
+    "baseline_7d_avg": 0.0,
+    "z_score": 6.0,
+    "direction": "spike",
+    "description": "Narrative 'prices' mentions spiked: 6 vs baseline 0.0 (z=6.0σ)"
+  },
+  {
+    "type": "entity",
+    "item": "OCP Group",
+    "recent_7d": 5,
+    "baseline_7d_avg": 0.0,
+    "z_score": 5.0,
+    "direction": "spike",
+    "description": "Entity 'OCP Group' mentions spiked: 5 vs baseline 0.0 (z=5.0σ)"
+  },
+  {
+    "type": "commodity",
+    "item": "corn",
+    "recent_7d": 5,
+    "baseline_7d_avg": 0.0,
+    "z_score": 5.0,
+    "direction": "spike",
+    "description": "Commodity 'corn' mentions spiked: 5 vs baseline 0.0 (z=5.0σ)"
+  },
+  {
+    "type": "entity",
+    "item": "Bunge",
+    "recent_7d": 4,
+    "baseline_7d_avg": 0.0,
+    "z_score": 4.0,
+    "direction": "spike",
+    "description": "Entity 'Bunge' mentions spiked: 4 vs baseline 0.0 (z=4.0σ)"
+  },
+  {
+    "type": "commodity",
+    "item": "vitamins",
+    "recent_7d": 4,
+    "baseline_7d_avg": 0.0,
+    "z_score": 4.0,
+    "direction": "spike",
+    "description": "Commodity 'vitamins' mentions spiked: 4 vs baseline 0.0 (z=4.0σ)"
+  },
+  {
+    "type": "commodity",
+    "item": "wheat",
+    "recent_7d": 4,
+    "baseline_7d_avg": 0.0,
+    "z_score": 4.0,
+    "direction": "spike",
+    "description": "Commodity 'wheat' mentions spiked: 4 vs baseline 0.0 (z=4.0σ)"
+  },
+  {
+    "type": "commodity",
+    "item": "methionine",
+    "recent_7d": 4,
+    "baseline_7d_avg": 0.0,
+    "z_score": 4.0,
+    "direction": "spike",
+    "description": "Commodity 'methionine' mentions spiked: 4 vs baseline 0.0 (z=4.0σ)"
+  },
+  {
+    "type": "commodity",
+    "item": "DCP",
+    "recent_7d": 4,
+    "baseline_7d_avg": 0.0,
+    "z_score": 4.0,
+    "direction": "spike",
+    "description": "Commodity 'DCP' mentions spiked: 4 vs baseline 0.0 (z=4.0σ)"
+  },
+  {
+    "type": "entity",
+    "item": "DSM-Firmenich",
+    "recent_7d": 3,
+    "baseline_7d_avg": 0.0,
+    "z_score": 3.0,
+    "direction": "spike",
+    "description": "Entity 'DSM-Firmenich' mentions spiked: 3 vs baseline 0.0 (z=3.0σ)"
+  },
+  {
+    "type": "entity",
+    "item": "dsm-firmenich",
+    "recent_7d": 3,
+    "baseline_7d_avg": 0.0,
+    "z_score": 3.0,
+    "direction": "spike",
+    "description": "Entity 'dsm-firmenich' mentions spiked: 3 vs baseline 0.0 (z=3.0σ)"
+  },
+  {
+    "type": "entity",
+    "item": "OCP",
+    "recent_7d": 3,
+    "baseline_7d_avg": 0.0,
+    "z_score": 3.0,
+    "direction": "spike",
+    "description": "Entity 'OCP' mentions spiked: 3 vs baseline 0.0 (z=3.0σ)"
+  },
+  {
+    "type": "entity",
+    "item": "Yara",
+    "recent_7d": 3,
+    "baseline_7d_avg": 0.0,
+    "z_score": 3.0,
+    "direction": "spike",
+    "description": "Entity 'Yara' mentions spiked: 3 vs baseline 0.0 (z=3.0σ)"
+  },
+  {
+    "type": "commodity",
+    "item": "lysine",
+    "recent_7d": 3,
+    "baseline_7d_avg": 0.0,
+    "z_score": 3.0,
+    "direction": "spike",
+    "description": "Commodity 'lysine' mentions spiked: 3 vs baseline 0.0 (z=3.0σ)"
+  },
+  {
+    "type": "commodity",
+    "item": "threonine",
+    "recent_7d": 3,
+    "baseline_7d_avg": 0.0,
+    "z_score": 3.0,
+    "direction": "spike",
+    "description": "Commodity 'threonine' mentions spiked: 3 vs baseline 0.0 (z=3.0σ)"
+  },
+  {
+    "type": "narrative",
+    "item": "regulatory",
+    "recent_7d": 3,
+    "baseline_7d_avg": 0.0,
+    "z_score": 3.0,
+    "direction": "spike",
+    "description": "Narrative 'regulatory' mentions spiked: 3 vs baseline 0.0 (z=3.0σ)"
+  }
+]

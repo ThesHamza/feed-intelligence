@@ -1,0 +1,18 @@
+{
+  "composite": 55.2,
+  "level": "medium",
+  "interpretation": "Tension modérée. Surveillance accrue des signaux émergents recommandée.",
+  "components": {
+    "price_volatility": 49.5,
+    "sentiment_polarization": 61.3,
+    "regulatory_pressure": 0,
+    "weak_signal_density": 100
+  },
+  "weights": {
+    "price_volatility": 0.3,
+    "sentiment_polarization": 0.25,
+    "regulatory_pressure": 0.2,
+    "weak_signal_density": 0.25
+  },
+  "computed_at": "2026-05-19T21:53:04.702574+00:00"
+}

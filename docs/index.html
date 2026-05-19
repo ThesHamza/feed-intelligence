@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feed Market Intelligence — Dashboard</title>
+  <title>Feed Market Intelligence — Economic Intelligence Dashboard</title>
   <link rel="stylesheet" href="assets/style.css">
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
@@ -13,8 +13,8 @@
   <header class="site-header">
     <div class="container">
       <div class="brand">
-        <h1>Feed Market Intelligence</h1>
-        <p class="tagline">Phosphates · Amino acids · Additives · Players — global market signals</p>
+        <h1>Feed Market Intelligence <span class="version-badge">v3 · Economic Intelligence</span></h1>
+        <p class="tagline">Media · Prices · Competitors · Regulatory · Trade · Geopolitics · Patents · Signals</p>
       </div>
       <div class="meta">
         <span id="last-updated">Loading…</span>
@@ -22,85 +22,184 @@
     </div>
   </header>
 
+  <!-- NAV -->
+  <nav class="dash-nav">
+    <div class="container nav-inner">
+      <a href="#tension">Tension</a>
+      <a href="#signals">Signals</a>
+      <a href="#prices">Prices</a>
+      <a href="#forecasts">Forecasts</a>
+      <a href="#competitors">Competitors</a>
+      <a href="#regulatory">Regulatory</a>
+      <a href="#trade">Trade flows</a>
+      <a href="#geopolitics">Geopolitics</a>
+      <a href="#patents">Patents</a>
+      <a href="#stakeholders">Stakeholders</a>
+      <a href="#articles">Articles</a>
+    </div>
+  </nav>
+
   <main class="container">
 
-    <!-- ================= KPI BAR ================= -->
+    <!-- ================ KPI BAR ================ -->
     <section class="kpi-grid">
-      <div class="kpi-card">
-        <div class="kpi-label">Articles 7d</div>
-        <div class="kpi-value" id="kpi-articles">—</div>
-        <div class="kpi-sub">classified</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">Entities tracked</div>
-        <div class="kpi-value" id="kpi-entities">—</div>
-        <div class="kpi-sub">30-day window</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">Active signals</div>
-        <div class="kpi-value" id="kpi-signals">—</div>
-        <div class="kpi-sub">high-impact insights</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">Sources active</div>
-        <div class="kpi-value" id="kpi-sources">—</div>
-        <div class="kpi-sub">7-day window</div>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">AI confidence</div>
-        <div class="kpi-value" id="kpi-confidence">—</div>
-        <div class="kpi-sub">avg score</div>
+      <div class="kpi-card"><div class="kpi-label">Articles 7d</div><div class="kpi-value" id="kpi-articles">—</div><div class="kpi-sub">classified</div></div>
+      <div class="kpi-card"><div class="kpi-label">Active signals</div><div class="kpi-value" id="kpi-signals">—</div><div class="kpi-sub">high-impact insights</div></div>
+      <div class="kpi-card"><div class="kpi-label">Weak signals</div><div class="kpi-value" id="kpi-weak">—</div><div class="kpi-sub">anomalies detected</div></div>
+      <div class="kpi-card"><div class="kpi-label">Reg. alerts</div><div class="kpi-value" id="kpi-regulatory">—</div><div class="kpi-sub">last 30 days</div></div>
+      <div class="kpi-card"><div class="kpi-label">Patents tracked</div><div class="kpi-value" id="kpi-patents">—</div><div class="kpi-sub">recent filings</div></div>
+      <div class="kpi-card"><div class="kpi-label">AI confidence</div><div class="kpi-value" id="kpi-confidence">—</div><div class="kpi-sub">avg score</div></div>
+    </section>
+
+    <!-- ================ MARKET TENSION INDEX ================ -->
+    <section class="card tension-card" id="tension">
+      <h2>Market Tension Index</h2>
+      <p class="card-sub">Composite indicator across 4 dimensions: price volatility, sentiment polarization, regulatory severity, weak signals density.</p>
+      <div class="tension-display">
+        <div class="tension-gauge">
+          <div class="tension-circle" id="tension-circle">
+            <span class="tension-value" id="tension-value">—</span>
+            <span class="tension-label" id="tension-level">—</span>
+          </div>
+        </div>
+        <div class="tension-detail">
+          <p id="tension-interpretation" class="tension-interpretation">—</p>
+          <div class="tension-components" id="tension-components"></div>
+        </div>
       </div>
     </section>
 
-    <!-- ================= COMMODITY PRICES ================= -->
-    <section class="card">
+    <!-- ================ WEAK SIGNALS ================ -->
+    <section class="card" id="signals-weak">
+      <h2>Weak signals · anomaly detection</h2>
+      <p class="card-sub">Statistical alerts on items spiking or dropping abnormally (z-score &gt; 2σ over 14-day baseline).</p>
+      <div id="weak-signals-list" class="weak-signals-grid"></div>
+    </section>
+
+    <!-- ================ COMMODITY PRICES ================ -->
+    <section class="card" id="prices">
       <div class="card-header-row">
         <div>
           <h2>Commodity prices</h2>
-          <p class="card-sub">Indexed to 100 at start. CBOT futures, last 90 days. <em>Live data from Yahoo Finance.</em></p>
+          <p class="card-sub">Indexed to 100 at start. CBOT futures, last 90 days. <em>Live from Yahoo Finance.</em></p>
         </div>
         <div id="prices-summary" class="prices-summary"></div>
       </div>
-      <div class="chart-wrap chart-wrap-tall">
-        <canvas id="chart-prices"></canvas>
-      </div>
+      <div class="chart-wrap chart-wrap-tall"><canvas id="chart-prices"></canvas></div>
     </section>
 
-    <!-- ================= POSITIONING MATRIX ================= -->
+    <!-- ================ FORECASTS ================ -->
+    <section class="card" id="forecasts">
+      <h2>30-day price forecasts</h2>
+      <p class="card-sub">Exponential smoothing model with 95% confidence bands. Updated daily.</p>
+      <div id="forecasts-grid" class="forecasts-grid"></div>
+    </section>
+
+    <!-- ================ COMPETITORS ================ -->
+    <section class="card" id="competitors">
+      <div class="card-header-row">
+        <div>
+          <h2>Competitors · equity performance</h2>
+          <p class="card-sub">90-day stock performance of direct OCP competitors vs sector index. <em>Live from Yahoo Finance.</em></p>
+        </div>
+        <div id="competitors-summary" class="competitors-summary"></div>
+      </div>
+      <div class="chart-wrap chart-wrap-tall"><canvas id="chart-competitors"></canvas></div>
+    </section>
+
+    <!-- ================ POSITIONING (media-derived) ================ -->
     <div class="grid-2">
       <div class="card">
-        <h2>Player positioning</h2>
-        <p class="card-sub">Share of voice (mentions) × sentiment. Bubble size = impact-weighted.</p>
-        <div class="chart-wrap chart-wrap-tall">
-          <canvas id="chart-positioning"></canvas>
-        </div>
-        <div class="positioning-legend">
-          <span class="legend-item"><span class="dot" style="background:#3b82f6"></span> Phosphate suppliers</span>
-          <span class="legend-item"><span class="dot" style="background:#16a34a"></span> Additive suppliers</span>
-          <span class="legend-item"><span class="dot" style="background:#ea580c"></span> Integrators</span>
-        </div>
+        <h2>Player positioning · media</h2>
+        <p class="card-sub">Mentions × sentiment. Bubble size = impact-weighted.</p>
+        <div class="chart-wrap chart-wrap-tall"><canvas id="chart-positioning"></canvas></div>
       </div>
-
-      <!-- ================= HEATMAP ================= -->
       <div class="card">
         <h2>Commodity × region heatmap</h2>
-        <p class="card-sub">Mentions count, colored by avg sentiment. Hover for detail.</p>
+        <p class="card-sub">Mentions count colored by avg sentiment.</p>
         <div id="heatmap" class="heatmap-wrap"></div>
         <div class="heatmap-legend">
-          <span>Bearish</span>
-          <span class="gradient-bar"></span>
-          <span>Bullish</span>
+          <span>Bearish</span><span class="gradient-bar"></span><span>Bullish</span>
         </div>
       </div>
     </div>
 
-    <!-- ================= SIGNALS STREAM ================= -->
+    <!-- ================ REGULATORY RADAR ================ -->
+    <section class="card" id="regulatory">
+      <h2>Regulatory radar</h2>
+      <p class="card-sub">Live tracking of EFSA, EUR-Lex, FDA, USDA, China MOA. Filtered for feed phosphate / animal nutrition relevance.</p>
+      <div class="regulatory-stats" id="regulatory-stats"></div>
+      <div id="regulatory-list" class="regulatory-list"></div>
+    </section>
+
+    <!-- ================ TRADE FLOWS ================ -->
+    <section class="card" id="trade">
+      <h2>Trade flows · UN Comtrade</h2>
+      <p class="card-sub">Phosphate exports/imports (HS 2510, 2835, 2309). Latest available year.</p>
+      <div class="trade-summary" id="trade-summary"></div>
+      <div class="grid-2 trade-charts">
+        <div>
+          <h3 class="card-sub-title">Top exporters</h3>
+          <div class="chart-wrap"><canvas id="chart-exporters"></canvas></div>
+        </div>
+        <div>
+          <h3 class="card-sub-title">Top importers</h3>
+          <div class="chart-wrap"><canvas id="chart-importers"></canvas></div>
+        </div>
+      </div>
+      <h3 class="card-sub-title" style="margin-top:1rem">Top trade corridors</h3>
+      <div id="trade-corridors" class="trade-corridors"></div>
+    </section>
+
+    <!-- ================ GEOPOLITICS ================ -->
+    <section class="card" id="geopolitics">
+      <h2>Geopolitical events · GDELT</h2>
+      <p class="card-sub">Events impacting phosphate trade flows, with country tone (-10 to +10).</p>
+      <div class="geo-events-list" id="geo-events-list"></div>
+    </section>
+
+    <!-- ================ PATENTS ================ -->
+    <section class="card" id="patents">
+      <h2>Patent watch</h2>
+      <p class="card-sub">Recent patent filings on feed phosphates, additives, substitutes, and processes.</p>
+      <div class="patents-stats" id="patents-stats"></div>
+      <div id="patents-list" class="patents-list"></div>
+    </section>
+
+    <!-- ================ STAKEHOLDERS GRAPH ================ -->
+    <section class="card" id="stakeholders">
+      <h2>Stakeholder network</h2>
+      <p class="card-sub">Co-occurrence graph of companies, regulators, and key actors from media flow. Drag nodes to explore.</p>
+      <div id="stakeholder-graph" class="stakeholder-graph"></div>
+    </section>
+
+    <!-- ================ POSITIONS / NARRATIVES ================ -->
+    <div class="grid-2">
+      <div class="card">
+        <h2>Market positions trend</h2>
+        <p class="card-sub">Bullish vs bearish article flow, last 30 days.</p>
+        <div class="chart-wrap"><canvas id="chart-positions"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>Narratives</h2>
+        <p class="card-sub">Dominant themes driving the conversation.</p>
+        <div class="chart-wrap"><canvas id="chart-narratives"></canvas></div>
+      </div>
+    </div>
+
+    <!-- ================ ENTITIES ================ -->
     <section class="card">
+      <h2>Top entities by mention volume</h2>
+      <p class="card-sub">30-day window. Color = sentiment direction.</p>
+      <div class="chart-wrap chart-wrap-tall"><canvas id="chart-entities"></canvas></div>
+    </section>
+
+    <!-- ================ MARKET SIGNALS ================ -->
+    <section class="card" id="signals">
       <div class="card-header-row">
         <div>
-          <h2>Market signals</h2>
-          <p class="card-sub">High-impact insights extracted by AI from classified articles.</p>
+          <h2>Market signals · LLM-extracted</h2>
+          <p class="card-sub">High-impact insights extracted from classified articles.</p>
         </div>
         <div class="filters">
           <select id="signal-filter-impact">
@@ -113,29 +212,8 @@
       <div id="signals-stream" class="signals-stream"></div>
     </section>
 
-    <!-- ================= POSITIONS TIMELINE + NARRATIVES ================= -->
-    <div class="grid-2">
-      <div class="card">
-        <h2>Market positions trend</h2>
-        <p class="card-sub">Bullish vs bearish article flow, last 30 days.</p>
-        <div class="chart-wrap"><canvas id="chart-positions"></canvas></div>
-      </div>
-      <div class="card">
-        <h2>Narratives</h2>
-        <p class="card-sub">Dominant themes — what's driving the conversation.</p>
-        <div class="chart-wrap"><canvas id="chart-narratives"></canvas></div>
-      </div>
-    </div>
-
-    <!-- ================= TOP ENTITIES ================= -->
-    <section class="card">
-      <h2>Top entities by mention volume</h2>
-      <p class="card-sub">30-day window. Color = sentiment direction.</p>
-      <div class="chart-wrap chart-wrap-tall"><canvas id="chart-entities"></canvas></div>
-    </section>
-
-    <!-- ================= ARTICLES TABLE ================= -->
-    <section class="card">
+    <!-- ================ ARTICLES TABLE ================ -->
+    <section class="card" id="articles">
       <div class="card-header-row">
         <div>
           <h2>Article feed</h2>
@@ -145,26 +223,16 @@
           <select id="filter-region"><option value="">All regions</option></select>
           <select id="filter-narrative"><option value="">All narratives</option></select>
           <select id="filter-position"><option value="">All positions</option></select>
-          <input type="search" id="filter-search" placeholder="Search title or entity…">
+          <input type="search" id="filter-search" placeholder="Search…">
         </div>
       </div>
       <div class="table-wrap">
         <table id="articles-table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Title</th>
-              <th>Source</th>
-              <th>Region</th>
-              <th>Position</th>
-              <th>Narrative</th>
-              <th>Companies</th>
-              <th>Conf.</th>
-            </tr>
-          </thead>
-          <tbody id="articles-body">
-            <tr><td colspan="8" style="text-align:center;padding:2rem;">Loading…</td></tr>
-          </tbody>
+          <thead><tr>
+            <th>Date</th><th>Title</th><th>Source</th><th>Region</th>
+            <th>Position</th><th>Narrative</th><th>Companies</th><th>Conf.</th>
+          </tr></thead>
+          <tbody id="articles-body"><tr><td colspan="8" style="text-align:center;padding:2rem">Loading…</td></tr></tbody>
         </table>
       </div>
       <div class="table-footer"><span id="articles-count">—</span></div>
@@ -174,12 +242,14 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Real-time RSS collection → trafilatura extraction → spaCy NER → Gemini classification → live dashboard. Auto-updated daily at 06:00 UTC.</p>
+      <p>Economic Intelligence pipeline · v3 · Auto-updated daily 06:00 UTC · Built on public data sources (RSS, Yahoo Finance, UN Comtrade, GDELT, Google Patents)</p>
     </div>
   </footer>
 
   <script src="assets/charts.js"></script>
   <script src="assets/heatmap.js"></script>
+  <script src="assets/ei-modules.js"></script>
+  <script src="assets/stakeholders.js"></script>
   <script src="assets/dashboard.js"></script>
 </body>
 </html>

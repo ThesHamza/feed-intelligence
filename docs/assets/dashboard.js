@@ -1,5 +1,6 @@
 /* ============================================================================
-   dashboard.js — orchestrator for the v2 market intelligence dashboard
+   dashboard.js — v3 orchestrator
+   Fetches all data files and dispatches to v2 + v3 renderers
    ============================================================================ */
 
 (async function init() {
@@ -8,7 +9,14 @@
   const fetchJSON = (name, fallback) =>
     fetch(dataPath + name).then(r => r.ok ? r.json() : fallback).catch(() => fallback);
 
-  const [articles, entities, timeseries, metadata, prices, positioning, heatmap, signals] = await Promise.all([
+  // Parallel fetch of all 16 data files (v2 + v3)
+  const [
+    articles, entities, timeseries, metadata,
+    prices, positioning, heatmap, signals,
+    // v3 additions
+    competitors, regulatory, weakSignals, tension,
+    tradeFlows, geopolitics, patents, forecasts, stakeholders,
+  ] = await Promise.all([
     fetchJSON('articles.json', []),
     fetchJSON('entities.json', []),
     fetchJSON('timeseries.json', null),
@@ -17,18 +25,42 @@
     fetchJSON('positioning.json', []),
     fetchJSON('heatmap.json', null),
     fetchJSON('signals.json', []),
+    fetchJSON('competitors.json', null),
+    fetchJSON('regulatory.json', null),
+    fetchJSON('weak_signals.json', []),
+    fetchJSON('tension.json', null),
+    fetchJSON('trade_flows.json', null),
+    fetchJSON('geopolitics.json', null),
+    fetchJSON('patents.json', null),
+    fetchJSON('forecasts.json', null),
+    fetchJSON('stakeholders.json', null),
   ]);
 
-  populateKPIs(metadata, articles, entities, signals);
+  // ============ KPIs ============
+  populateKPIs(metadata, articles, signals, weakSignals, regulatory, patents);
+
+  // ============ v3 NEW: render in display order ============
+  EI.renderTension(tension);
+  EI.renderWeakSignals(weakSignals);
 
   if (prices) {
     Charts.renderPrices(prices);
     renderPricesSummary(prices);
   }
 
+  EI.renderForecasts(forecasts);
+
+  EI.renderCompetitors(competitors);
+
   if (positioning.length) Charts.renderPositioning(positioning);
   if (heatmap) Heatmap.render(heatmap);
-  if (signals.length) renderSignals(signals);
+
+  EI.renderRegulatory(regulatory);
+  EI.renderTradeFlows(tradeFlows);
+  EI.renderGeopolitics(geopolitics);
+  EI.renderPatents(patents);
+
+  Stakeholders.render(stakeholders);
 
   if (timeseries) {
     Charts.renderPositions(timeseries);
@@ -36,12 +68,14 @@
   }
   if (entities.length) Charts.renderEntities(entities);
 
+  if (signals.length) renderSignals(signals);
+
   setupArticleTable(articles);
   setupSignalsFilter(signals);
 
-  // =========================================================================
+  // ==========================================================================
 
-  function populateKPIs(metadata, articles, entities, signals) {
+  function populateKPIs(metadata, articles, signals, weakSignals, regulatory, patents) {
     if (metadata && metadata.last_updated) {
       document.getElementById('last-updated').textContent =
         'Last updated: ' + new Date(metadata.last_updated).toLocaleString();
@@ -50,12 +84,12 @@
     const cutoff = Date.now() - 7 * 24 * 3600 * 1000;
     const recent = articles.filter(a => a.date && new Date(a.date).getTime() >= cutoff);
     document.getElementById('kpi-articles').textContent = recent.length || articles.length;
-
-    document.getElementById('kpi-entities').textContent = entities.length;
     document.getElementById('kpi-signals').textContent = signals.length;
+    document.getElementById('kpi-weak').textContent = weakSignals.length;
+    document.getElementById('kpi-regulatory').textContent = (regulatory && regulatory.count) || 0;
+    document.getElementById('kpi-patents').textContent = (patents && patents.count) || 0;
 
     if (metadata) {
-      document.getElementById('kpi-sources').textContent = metadata.sources_active_7d ?? '—';
       document.getElementById('kpi-confidence').textContent =
         metadata.avg_confidence_7d ? metadata.avg_confidence_7d + '%' : '—';
     }
@@ -71,15 +105,13 @@
       return `
         <div class="price-pill">
           <span class="pname">${s.name}</span>
-          <span class="pval">${s.latest ?? '—'} <span style="font-weight:400;font-size:0.7rem;color:var(--text-muted)">${s.unit}</span></span>
+          <span class="pval">${s.latest ?? '—'} <span style="font-weight:400;font-size:0.65rem;color:var(--text-muted)">${s.unit}</span></span>
           <span class="pchange ${cls}">${arrow} ${ch == null ? '—' : (ch > 0 ? '+' : '') + ch + '% / 30d'}</span>
         </div>`;
     }).join('');
   }
 
   function renderSignals(signals) {
-    const container = document.getElementById('signals-stream');
-    if (!container) return;
     window._signalsAll = signals;
     paintSignals(signals);
   }
@@ -115,8 +147,7 @@
     if (!filter) return;
     filter.addEventListener('input', () => {
       const val = filter.value;
-      const list = val ? signals.filter(s => s.impact === val) : signals;
-      paintSignals(list);
+      paintSignals(val ? signals.filter(s => s.impact === val) : signals);
     });
   }
 
@@ -195,9 +226,7 @@
   }
 
   function escapeHtml(s) {
-    return String(s || '').replace(/[&<>"']/g, c => ({
-      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-    }[c]));
+    return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   }
   function escapeAttr(s) { return escapeHtml(s); }
 })();
