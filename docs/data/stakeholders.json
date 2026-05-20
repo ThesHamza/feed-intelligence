@@ -1,262 +1,52 @@
 {
-  "fetched_at": "2026-05-20T20:03:43.468277+00:00",
+  "fetched_at": "2026-05-20T20:09:59.073022+00:00",
   "nodes": [
     {
       "id": "OCP Group",
       "category": "phosphate_suppliers",
-      "mentions": 2
-    },
-    {
-      "id": "DSM-Firmenich",
-      "category": "additive_suppliers",
-      "mentions": 2
-    },
-    {
-      "id": "Cargill",
-      "category": "additive_suppliers",
-      "mentions": 2
-    },
-    {
-      "id": "Ajinomoto",
-      "category": "additive_suppliers",
-      "mentions": 2
-    },
-    {
-      "id": "CJ Bio",
-      "category": "additive_suppliers",
-      "mentions": 1
+      "mentions": 5
     },
     {
       "id": "Mosaic",
       "category": "phosphate_suppliers",
-      "mentions": 1
-    },
-    {
-      "id": "Adisseo",
-      "category": "additive_suppliers",
-      "mentions": 1
-    },
-    {
-      "id": "Bunge",
-      "category": "additive_suppliers",
-      "mentions": 1
-    },
-    {
-      "id": "Nutreco",
-      "category": "additive_suppliers",
-      "mentions": 1
-    },
-    {
-      "id": "Tyson Foods",
-      "category": "integrators",
-      "mentions": 1
-    },
-    {
-      "id": "Evonik",
-      "category": "additive_suppliers",
-      "mentions": 1
-    },
-    {
-      "id": "JBS",
-      "category": "integrators",
-      "mentions": 1
-    },
-    {
-      "id": "Alltech",
-      "category": "additive_suppliers",
-      "mentions": 1
+      "mentions": 6
     },
     {
       "id": "Nutrien",
       "category": "phosphate_suppliers",
-      "mentions": 1
+      "mentions": 2
     },
     {
-      "id": "Smithfield",
-      "category": "integrators",
-      "mentions": 1
-    },
-    {
-      "id": "EFSA",
-      "category": "regulator",
-      "mentions": 6
-    },
-    {
-      "id": "FDA",
-      "category": "regulator",
-      "mentions": 6
-    },
-    {
-      "id": "EU Commission",
-      "category": "regulator",
-      "mentions": 6
-    },
-    {
-      "id": "USDA",
-      "category": "regulator",
-      "mentions": 6
-    },
-    {
-      "id": "China MOA",
-      "category": "regulator",
-      "mentions": 6
+      "id": "Yara",
+      "category": "phosphate_suppliers",
+      "mentions": 3
     }
   ],
   "edges": [
     {
-      "source": "Evonik",
-      "target": "Nutrien",
+      "source": "Mosaic",
+      "target": "OCP Group",
       "weight": 2
-    },
-    {
-      "source": "Alltech",
-      "target": "USDA",
-      "weight": 4
-    },
-    {
-      "source": "Nutreco",
-      "target": "DSM-Firmenich",
-      "weight": 7
-    },
-    {
-      "source": "OCP Group",
-      "target": "FDA",
-      "weight": 4
-    },
-    {
-      "source": "JBS",
-      "target": "Nutrien",
-      "weight": 2
-    },
-    {
-      "source": "Evonik",
-      "target": "China MOA",
-      "weight": 2
-    },
-    {
-      "source": "Tyson Foods",
-      "target": "FDA",
-      "weight": 5
-    },
-    {
-      "source": "Alltech",
-      "target": "Tyson Foods",
-      "weight": 3
-    },
-    {
-      "source": "Adisseo",
-      "target": "Nutrien",
-      "weight": 7
     },
     {
       "source": "Mosaic",
-      "target": "USDA",
-      "weight": 5
-    },
-    {
-      "source": "Alltech",
-      "target": "EU Commission",
+      "target": "Nutrien",
       "weight": 1
     },
     {
-      "source": "Tyson Foods",
-      "target": "China MOA",
-      "weight": 4
-    },
-    {
       "source": "Nutrien",
-      "target": "USDA",
-      "weight": 6
-    },
-    {
-      "source": "Smithfield",
-      "target": "China MOA",
-      "weight": 8
-    },
-    {
-      "source": "Adisseo",
-      "target": "FDA",
-      "weight": 8
-    },
-    {
-      "source": "Mosaic",
-      "target": "Cargill",
-      "weight": 5
-    },
-    {
-      "source": "FDA",
-      "target": "Evonik",
-      "weight": 2
-    },
-    {
-      "source": "Bunge",
-      "target": "Tyson Foods",
-      "weight": 4
-    },
-    {
-      "source": "Adisseo",
-      "target": "CJ Bio",
+      "target": "OCP Group",
       "weight": 1
     },
     {
-      "source": "DSM-Firmenich",
-      "target": "Bunge",
-      "weight": 8
-    },
-    {
-      "source": "China MOA",
-      "target": "Cargill",
-      "weight": 8
-    },
-    {
-      "source": "Adisseo",
-      "target": "Alltech",
-      "weight": 8
-    },
-    {
-      "source": "Alltech",
-      "target": "Bunge",
-      "weight": 3
-    },
-    {
-      "source": "OCP Group",
-      "target": "Ajinomoto",
-      "weight": 7
-    },
-    {
-      "source": "Bunge",
-      "target": "Mosaic",
-      "weight": 8
-    },
-    {
-      "source": "DSM-Firmenich",
-      "target": "EU Commission",
-      "weight": 4
-    },
-    {
-      "source": "Ajinomoto",
-      "target": "Smithfield",
-      "weight": 3
-    },
-    {
-      "source": "Smithfield",
-      "target": "FDA",
-      "weight": 6
-    },
-    {
       "source": "Nutrien",
-      "target": "EU Commission",
-      "weight": 8
-    },
-    {
-      "source": "Mosaic",
-      "target": "EFSA",
-      "weight": 8
+      "target": "Yara",
+      "weight": 1
     }
   ],
   "stats": {
-    "total_entities": 15,
-    "kept_nodes": 20,
-    "kept_edges": 30
+    "total_entities": 14,
+    "kept_nodes": 4,
+    "kept_edges": 4
   }
 }
