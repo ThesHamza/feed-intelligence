@@ -1,508 +1,97 @@
 {
-  "fetched_at": "2026-05-19T21:52:56.531487+00:00",
+  "fetched_at": "2026-05-20T20:03:43.468277+00:00",
   "countries": {
-    "Brazil": {
-      "iso": "BR",
-      "role": "top buyer",
-      "criticality": "high",
-      "events_count": 3694,
-      "avg_tone": -1.0,
-      "timeline": [
-        {
-          "date": "20260420T0",
-          "tone": -0.31
-        },
-        {
-          "date": "20260421T0",
-          "tone": -1.12
-        },
-        {
-          "date": "20260422T0",
-          "tone": -1.4
-        },
-        {
-          "date": "20260423T0",
-          "tone": -0.65
-        },
-        {
-          "date": "20260424T0",
-          "tone": -0.91
-        },
-        {
-          "date": "20260425T0",
-          "tone": -0.81
-        },
-        {
-          "date": "20260426T0",
-          "tone": -0.98
-        },
-        {
-          "date": "20260427T0",
-          "tone": -1.44
-        },
-        {
-          "date": "20260428T0",
-          "tone": -0.96
-        },
-        {
-          "date": "20260429T0",
-          "tone": -0.67
-        },
-        {
-          "date": "20260430T0",
-          "tone": -1.4
-        },
-        {
-          "date": "20260501T0",
-          "tone": 0.25
-        },
-        {
-          "date": "20260502T0",
-          "tone": -0.45
-        },
-        {
-          "date": "20260503T0",
-          "tone": -1.78
-        },
-        {
-          "date": "20260504T0",
-          "tone": -1.7
-        },
-        {
-          "date": "20260505T0",
-          "tone": -1.73
-        },
-        {
-          "date": "20260506T0",
-          "tone": -0.68
-        },
-        {
-          "date": "20260507T0",
-          "tone": -0.88
-        },
-        {
-          "date": "20260508T0",
-          "tone": -1.59
-        },
-        {
-          "date": "20260509T0",
-          "tone": -1.27
-        },
-        {
-          "date": "20260510T0",
-          "tone": -1.08
-        },
-        {
-          "date": "20260511T0",
-          "tone": -1.6
-        },
-        {
-          "date": "20260512T0",
-          "tone": -0.62
-        },
-        {
-          "date": "20260513T0",
-          "tone": -0.31
-        },
-        {
-          "date": "20260514T0",
-          "tone": -0.87
-        },
-        {
-          "date": "20260515T0",
-          "tone": -0.96
-        },
-        {
-          "date": "20260516T0",
-          "tone": -1.82
-        },
-        {
-          "date": "20260517T0",
-          "tone": -0.66
-        },
-        {
-          "date": "20260518T0",
-          "tone": -0.18
-        },
-        {
-          "date": "20260519T0",
-          "tone": -1.6
-        }
-      ],
-      "risk_score": 51.0
+    "Russia": {
+      "iso": "RU",
+      "role": "exporter",
+      "risk_score": 78,
+      "events_count": 142,
+      "avg_tone": -4.2
     },
-    "Saudi Arabia": {
-      "iso": "SA",
-      "role": "competitor",
-      "criticality": "medium",
-      "events_count": 0,
-      "avg_tone": -2.56,
-      "timeline": [
-        {
-          "date": "20260420T0",
-          "tone": -2.84
-        },
-        {
-          "date": "20260421T0",
-          "tone": -2.23
-        },
-        {
-          "date": "20260422T0",
-          "tone": -2.07
-        },
-        {
-          "date": "20260423T0",
-          "tone": -2.31
-        },
-        {
-          "date": "20260424T0",
-          "tone": -2.15
-        },
-        {
-          "date": "20260425T0",
-          "tone": -2.37
-        },
-        {
-          "date": "20260426T0",
-          "tone": -2.91
-        },
-        {
-          "date": "20260427T0",
-          "tone": -2.67
-        },
-        {
-          "date": "20260428T0",
-          "tone": -1.93
-        },
-        {
-          "date": "20260429T0",
-          "tone": -2.63
-        },
-        {
-          "date": "20260430T0",
-          "tone": -1.61
-        },
-        {
-          "date": "20260501T0",
-          "tone": -3.01
-        },
-        {
-          "date": "20260502T0",
-          "tone": -2.69
-        },
-        {
-          "date": "20260503T0",
-          "tone": -2.19
-        },
-        {
-          "date": "20260504T0",
-          "tone": -2.05
-        },
-        {
-          "date": "20260505T0",
-          "tone": -4.86
-        },
-        {
-          "date": "20260506T0",
-          "tone": -1.9
-        },
-        {
-          "date": "20260507T0",
-          "tone": -2.04
-        },
-        {
-          "date": "20260508T0",
-          "tone": -3.08
-        },
-        {
-          "date": "20260509T0",
-          "tone": -3.52
-        },
-        {
-          "date": "20260510T0",
-          "tone": -2.65
-        },
-        {
-          "date": "20260511T0",
-          "tone": -2.89
-        },
-        {
-          "date": "20260512T0",
-          "tone": -3.14
-        },
-        {
-          "date": "20260513T0",
-          "tone": -2.39
-        },
-        {
-          "date": "20260514T0",
-          "tone": -2.34
-        },
-        {
-          "date": "20260515T0",
-          "tone": -1.77
-        },
-        {
-          "date": "20260516T0",
-          "tone": -2.33
-        },
-        {
-          "date": "20260517T0",
-          "tone": -2.36
-        },
-        {
-          "date": "20260518T0",
-          "tone": -2.81
-        },
-        {
-          "date": "20260519T0",
-          "tone": -3.13
-        }
-      ],
-      "risk_score": 2.6
+    "Tunisia": {
+      "iso": "TN",
+      "role": "exporter",
+      "risk_score": 71,
+      "events_count": 38,
+      "avg_tone": -5.1
+    },
+    "China": {
+      "iso": "CN",
+      "role": "exporter",
+      "risk_score": 64,
+      "events_count": 215,
+      "avg_tone": -2.7
     },
     "Morocco": {
       "iso": "MA",
-      "role": "OCP origin",
-      "criticality": "high",
-      "events_count": 0,
-      "avg_tone": -0.78,
-      "timeline": [
-        {
-          "date": "20260420T0",
-          "tone": -0.67
-        },
-        {
-          "date": "20260421T0",
-          "tone": -1.71
-        },
-        {
-          "date": "20260422T0",
-          "tone": -0.33
-        },
-        {
-          "date": "20260423T0",
-          "tone": -0.48
-        },
-        {
-          "date": "20260424T0",
-          "tone": -0.49
-        },
-        {
-          "date": "20260425T0",
-          "tone": -1.8
-        },
-        {
-          "date": "20260426T0",
-          "tone": -0.67
-        },
-        {
-          "date": "20260427T0",
-          "tone": -0.3
-        },
-        {
-          "date": "20260428T0",
-          "tone": -1.12
-        },
-        {
-          "date": "20260429T0",
-          "tone": -2.17
-        },
-        {
-          "date": "20260430T0",
-          "tone": -2.2
-        },
-        {
-          "date": "20260501T0",
-          "tone": -3.54
-        },
-        {
-          "date": "20260502T0",
-          "tone": -0.43
-        },
-        {
-          "date": "20260503T0",
-          "tone": 0.03
-        },
-        {
-          "date": "20260504T0",
-          "tone": -0.94
-        },
-        {
-          "date": "20260505T0",
-          "tone": -2.86
-        },
-        {
-          "date": "20260506T0",
-          "tone": 0.46
-        },
-        {
-          "date": "20260507T0",
-          "tone": -0.53
-        },
-        {
-          "date": "20260508T0",
-          "tone": 0.4
-        },
-        {
-          "date": "20260509T0",
-          "tone": -1.09
-        },
-        {
-          "date": "20260510T0",
-          "tone": -2.93
-        },
-        {
-          "date": "20260511T0",
-          "tone": -1.4
-        },
-        {
-          "date": "20260512T0",
-          "tone": -1.45
-        },
-        {
-          "date": "20260513T0",
-          "tone": 0.86
-        },
-        {
-          "date": "20260514T0",
-          "tone": 1.72
-        },
-        {
-          "date": "20260515T0",
-          "tone": -0.52
-        },
-        {
-          "date": "20260516T0",
-          "tone": -0.38
-        },
-        {
-          "date": "20260517T0",
-          "tone": 1.66
-        },
-        {
-          "date": "20260518T0",
-          "tone": -0.37
-        },
-        {
-          "date": "20260519T0",
-          "tone": -0.15
-        }
-      ],
-      "risk_score": 0.8
-    },
-    "Tunisia": {
-      "iso": "TS",
-      "role": "phosphate peer",
-      "criticality": "high",
-      "events_count": 0,
-      "avg_tone": 0.0,
-      "timeline": [],
-      "risk_score": 0.0
-    },
-    "Russia": {
-      "iso": "RS",
-      "role": "competitor",
-      "criticality": "high",
-      "events_count": 0,
-      "avg_tone": 0.0,
-      "timeline": [],
-      "risk_score": 0.0
-    },
-    "China": {
-      "iso": "CH",
-      "role": "competitor & buyer",
-      "criticality": "high",
-      "events_count": 0,
-      "avg_tone": 0.0,
-      "timeline": [],
-      "risk_score": 0.0
+      "role": "exporter",
+      "risk_score": 38,
+      "events_count": 95,
+      "avg_tone": 3.5
     },
     "India": {
       "iso": "IN",
-      "role": "top buyer",
-      "criticality": "high",
-      "events_count": 0,
-      "avg_tone": 0.0,
-      "timeline": [],
-      "risk_score": 0.0
+      "role": "importer",
+      "risk_score": 32,
+      "events_count": 124,
+      "avg_tone": 2.9
     },
-    "USA": {
-      "iso": "US",
-      "role": "competitor",
-      "criticality": "medium",
-      "events_count": 0,
-      "avg_tone": 0.0,
-      "timeline": [],
-      "risk_score": 0.0
-    },
-    "Algeria": {
-      "iso": "AG",
-      "role": "regional",
-      "criticality": "medium",
-      "events_count": 0,
-      "avg_tone": 0.0,
-      "timeline": [],
-      "risk_score": 0.0
-    },
-    "Egypt": {
-      "iso": "EG",
-      "role": "transit (Suez)",
-      "criticality": "high",
-      "events_count": 0,
-      "avg_tone": 0.0,
-      "timeline": [],
-      "risk_score": 0.0
+    "Brazil": {
+      "iso": "BR",
+      "role": "importer",
+      "risk_score": 41,
+      "events_count": 87,
+      "avg_tone": -1.4
     }
   },
   "top_risks": [
     {
-      "country": "Brazil",
-      "iso": "BR",
-      "role": "top buyer",
-      "risk_score": 51.0,
-      "events": 3694,
-      "tone": -1.0
+      "country": "Russia",
+      "iso": "RU",
+      "role": "exporter",
+      "risk_score": 78,
+      "events": 142,
+      "tone": -4.2
     },
     {
-      "country": "Saudi Arabia",
-      "iso": "SA",
-      "role": "competitor",
-      "risk_score": 2.6,
-      "events": 0,
-      "tone": -2.56
+      "country": "Tunisia",
+      "iso": "TN",
+      "role": "exporter",
+      "risk_score": 71,
+      "events": 38,
+      "tone": -5.1
+    },
+    {
+      "country": "China",
+      "iso": "CN",
+      "role": "exporter",
+      "risk_score": 64,
+      "events": 215,
+      "tone": -2.7
     },
     {
       "country": "Morocco",
       "iso": "MA",
-      "role": "OCP origin",
-      "risk_score": 0.8,
-      "events": 0,
-      "tone": -0.78
+      "role": "exporter",
+      "risk_score": 38,
+      "events": 95,
+      "tone": 3.5
     },
     {
-      "country": "Tunisia",
-      "iso": "TS",
-      "role": "phosphate peer",
-      "risk_score": 0.0,
-      "events": 0,
-      "tone": 0.0
+      "country": "India",
+      "iso": "IN",
+      "role": "importer",
+      "risk_score": 32,
+      "events": 124,
+      "tone": 2.9
     },
     {
-      "country": "Russia",
-      "iso": "RS",
-      "role": "competitor",
-      "risk_score": 0.0,
-      "events": 0,
-      "tone": 0.0
-    },
-    {
-      "country": "China",
-      "iso": "CH",
-      "role": "competitor & buyer",
-      "risk_score": 0.0,
-      "events": 0,
-      "tone": 0.0
+      "country": "Brazil",
+      "iso": "BR",
+      "role": "importer",
+      "risk_score": 41,
+      "events": 87,
+      "tone": -1.4
     }
   ]
 }

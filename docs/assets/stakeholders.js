@@ -29,6 +29,12 @@ const Stakeholders = (() => {
     const nodes = data.nodes.map(d => Object.assign({}, d));
     const links = (data.edges || []).map(d => Object.assign({}, d));
 
+    // Module emits 'mentions'; sample data emits 'size' — normalize
+    nodes.forEach(n => {
+      if (n.size == null) n.size = n.mentions || 1;
+      if (n.label == null) n.label = n.id;
+    });
+
     const sizeScale = d3.scaleLinear()
       .domain([0, Math.max(...nodes.map(n => n.size))])
       .range([8, 22]);

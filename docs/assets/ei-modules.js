@@ -110,41 +110,58 @@ const EI = (() => {
   }
 
   // ============================================================================
-  // 4. TRADE FLOWS
+  // 4. TRADE FLOWS — handles both rich sample format and minimal module format
   // ============================================================================
   function renderTradeFlows(trade) {
     if (!trade) return;
 
     // Summary
     const summary = document.getElementById('trade-summary');
-    const totalValue = (trade.total_value_usd / 1e9).toFixed(2);
+    const totalValue = ((trade.total_value_usd || 0) / 1e9).toFixed(2);
+    const period = trade.period || (trade.top_exporters?.[0]?.year ? `Year ${trade.top_exporters[0].year}` : 'Latest');
+    const hsCount = (trade.hs_codes || []).length;
     summary.innerHTML = `
       <div class="trade-stat"><strong>$${totalValue}B</strong>Total trade value</div>
-      <div class="trade-stat"><strong>${trade.period}</strong>Period</div>
+      <div class="trade-stat"><strong>${period}</strong>Period</div>
+      <div class="trade-stat"><strong>${hsCount}</strong>HS codes tracked</div>
       <div class="trade-stat"><strong>${(trade.top_exporters || []).length}</strong>Top exporters</div>
-      <div class="trade-stat"><strong>${(trade.top_importers || []).length}</strong>Top importers</div>
     `;
 
-    // Charts
-    renderTradeChart('chart-exporters', trade.top_exporters, palette.positive);
-    renderTradeChart('chart-importers', trade.top_importers, palette.accent);
+    // Exporters chart
+    if (trade.top_exporters?.length) {
+      renderTradeChart('chart-exporters', trade.top_exporters, palette.positive);
+    }
+    // Importers chart (only if present in data)
+    if (trade.top_importers?.length) {
+      renderTradeChart('chart-importers', trade.top_importers, palette.accent);
+    } else {
+      const importersEl = document.getElementById('chart-importers');
+      if (importersEl) {
+        const parent = importersEl.closest('.chart-wrap');
+        if (parent) parent.innerHTML = '<p style="color:var(--text-muted);padding:1rem;font-size:0.8125rem">Importers data not available from this source. UN Comtrade reports flows from exporter side.</p>';
+      }
+    }
 
-    // Corridors
+    // Corridors (only if present)
     const corridors = trade.key_corridors || [];
     const corridorsEl = document.getElementById('trade-corridors');
-    corridorsEl.innerHTML = corridors.map(c => {
-      const yoyCls = c.yoy_pct >= 0 ? 'up' : 'down';
-      const yoySign = c.yoy_pct >= 0 ? '+' : '';
-      const value = (c.value_usd / 1e6).toFixed(0);
-      return `
-        <div class="corridor">
-          <div>
-            <div class="corridor-route">${escapeHtml(c.from)} <span class="corridor-arrow">→</span> ${escapeHtml(c.to)}</div>
-            <div class="corridor-value">$${value}M</div>
-          </div>
-          <div class="corridor-yoy ${yoyCls}">${yoySign}${c.yoy_pct}%</div>
-        </div>`;
-    }).join('');
+    if (corridors.length) {
+      corridorsEl.innerHTML = corridors.map(c => {
+        const yoyCls = (c.yoy_pct ?? 0) >= 0 ? 'up' : 'down';
+        const yoySign = (c.yoy_pct ?? 0) >= 0 ? '+' : '';
+        const value = (c.value_usd / 1e6).toFixed(0);
+        return `
+          <div class="corridor">
+            <div>
+              <div class="corridor-route">${escapeHtml(c.from)} <span class="corridor-arrow">→</span> ${escapeHtml(c.to)}</div>
+              <div class="corridor-value">$${value}M</div>
+            </div>
+            ${c.yoy_pct != null ? `<div class="corridor-yoy ${yoyCls}">${yoySign}${c.yoy_pct}%</div>` : ''}
+          </div>`;
+      }).join('');
+    } else {
+      corridorsEl.innerHTML = '<p style="color:var(--text-muted);font-size:0.8125rem">Bilateral corridor data not available in current dataset.</p>';
+    }
   }
 
   function renderTradeChart(canvasId, data, color) {
@@ -155,7 +172,7 @@ const EI = (() => {
       data: {
         labels: data.map(d => d.country),
         datasets: [{
-          data: data.map(d => d.value_usd / 1e6),
+          data: data.map(d => (d.value_usd || 0) / 1e6),
           backgroundColor: color,
           borderRadius: 4,
         }],
@@ -181,12 +198,37 @@ const EI = (() => {
   }
 
   // ============================================================================
-  // 5. GEOPOLITICS
+  // 5. GEOPOLITICS — handles both real module (top_risks) and sample (events) formats
   // ============================================================================
   function renderGeopolitics(geo) {
     if (!geo) return;
-    const events = geo.events || [];
     const listEl = document.getElementById('geo-events-list');
+
+    // Real module format: top_risks (country-level)
+    if (geo.top_risks?.length) {
+      listEl.innerHTML = geo.top_risks.map(r => {
+        const tone = r.tone || 0;
+        const toneBg = tone > 1 ? palette.positive : tone < -1 ? palette.negative : palette.neutral;
+        const toneText = tone > 0 ? '+' + tone.toFixed(1) : tone.toFixed(1);
+        const riskBadge = r.risk_score >= 70 ? 'high' : r.risk_score >= 40 ? 'medium' : 'low';
+        return `
+          <div class="geo-event">
+            <div class="geo-tone" style="background:${toneBg}">${toneText}</div>
+            <div>
+              <div><strong>${escapeHtml(r.country)}</strong> <span style="color:var(--text-muted)">(${escapeHtml(r.iso || '')})</span></div>
+              <div class="geo-event-meta">
+                <span class="badge ${riskBadge}">Risk ${r.risk_score}</span>
+                · ${r.events} events
+                · ${escapeHtml(r.role || '')}
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+      return;
+    }
+
+    // Sample/legacy format: individual events
+    const events = geo.events || [];
     listEl.innerHTML = events.map(e => {
       const tone = e.tone || 0;
       const toneBg = tone > 1 ? palette.positive : tone < -1 ? palette.negative : palette.neutral;
@@ -218,18 +260,22 @@ const EI = (() => {
     const listEl = document.getElementById('patents-list');
     listEl.innerHTML = (p.patents || []).map(pt => {
       const date = pt.published_at ? new Date(pt.published_at).toISOString().slice(0, 10) : '';
-      const tags = (pt.tags || []).map(t => `<span class="badge">${escapeHtml(t)}</span>`).join(' ');
+      // Module emits 'theme' + 'applicant_hint'; sample emits 'tags' + 'applicant' + country + year
+      const applicant = pt.applicant || pt.applicant_hint || 'Unknown applicant';
+      const tagSource = pt.tags || (pt.theme ? [pt.theme] : []);
+      const tags = tagSource.map(t => `<span class="badge">${escapeHtml(t)}</span>`).join(' ');
+      const metaParts = [
+        `<span class="patent-applicant">${escapeHtml(applicant)}</span>`,
+        pt.applicant_country ? `<span>${escapeHtml(pt.applicant_country)}</span>` : '',
+        pt.publication_year ? `<span>${pt.publication_year}</span>` : '',
+        `<span>${date}</span>`,
+        pt.url ? `<a href="${escapeHtml(pt.url)}" target="_blank" rel="noopener noreferrer">↗</a>` : '',
+      ].filter(Boolean).join(' ');
       return `
         <div class="patent">
           <div class="patent-title">${escapeHtml(pt.title)}</div>
-          <div class="patent-meta">
-            <span class="patent-applicant">${escapeHtml(pt.applicant)}</span>
-            <span>${escapeHtml(pt.applicant_country)}</span>
-            <span>${pt.publication_year}</span>
-            <span>${date}</span>
-            ${pt.url ? `<a href="${escapeHtml(pt.url)}" target="_blank" rel="noopener noreferrer">↗</a>` : ''}
-          </div>
-          <div style="margin-top:0.375rem">${tags}</div>
+          <div class="patent-meta">${metaParts}</div>
+          ${tags ? `<div style="margin-top:0.375rem">${tags}</div>` : ''}
         </div>`;
     }).join('');
   }
@@ -303,39 +349,68 @@ const EI = (() => {
   }
 
   // ============================================================================
-  // 8. FORECASTS
+  // 8. FORECASTS — handles module output format (dict keyed by ticker)
   // ============================================================================
   function renderForecasts(fc) {
     if (!fc || !fc.forecasts) return;
+
+    // Module output is a DICT keyed by ticker (ZC=F, ZS=F, …). Convert to list.
+    let forecasts;
+    if (Array.isArray(fc.forecasts)) {
+      forecasts = fc.forecasts;  // backwards compat
+    } else {
+      forecasts = Object.entries(fc.forecasts).map(([ticker, f]) => ({
+        ticker,
+        name: f.name,
+        color: f.color,
+        unit: f.unit,
+        dates: f.forecast_dates,
+        point: f.forecast_values,
+        lower_bound: f.forecast_lower,
+        upper_bound: f.forecast_upper,
+        current: f.current,
+        forecast_30d: f.forecast_30d,
+        change_pct: f.change_pct,
+      }));
+    }
+
     const grid = document.getElementById('forecasts-grid');
-    grid.innerHTML = fc.forecasts.map((f, idx) => `
-      <div class="forecast-card">
-        <h4>${escapeHtml(f.name)}</h4>
-        <div class="forecast-chart-wrap"><canvas id="forecast-${idx}"></canvas></div>
-        <div class="forecast-meta">
-          <span>Horizon: ${f.horizon_days}d</span>
-          <span>RMSE: ±${f.rmse_pct}%</span>
-        </div>
-      </div>`).join('');
+    grid.innerHTML = forecasts.map((f, idx) => {
+      const ch = f.change_pct;
+      const cls = ch == null ? 'flat' : ch > 0.1 ? 'up' : ch < -0.1 ? 'down' : 'flat';
+      const arrow = ch == null ? '—' : ch > 0 ? '▲' : ch < 0 ? '▼' : '●';
+      return `
+        <div class="forecast-card">
+          <h4>${escapeHtml(f.name || f.ticker)}</h4>
+          <div class="forecast-chart-wrap"><canvas id="forecast-${idx}"></canvas></div>
+          <div class="forecast-meta">
+            <span>30d: <strong style="color:${ch >= 0 ? 'var(--positive)' : 'var(--negative)'}">${arrow} ${ch == null ? '—' : (ch > 0 ? '+' : '') + ch + '%'}</strong></span>
+            <span>Current: ${f.current ?? '—'}</span>
+          </div>
+        </div>`;
+    }).join('');
 
     // Render each forecast mini chart
-    fc.forecasts.forEach((f, idx) => {
+    forecasts.forEach((f, idx) => {
       const ctx = document.getElementById('forecast-' + idx);
-      if (!ctx) return;
+      if (!ctx || !f.point) return;
       new Chart(ctx, {
         type: 'line',
         data: {
-          labels: f.dates,
+          labels: f.dates || [],
           datasets: [
-            { label: 'Upper', data: f.upper_bound, borderColor: 'transparent', backgroundColor: 'rgba(37,99,235,0.1)', fill: '+1', pointRadius: 0 },
-            { label: 'Forecast', data: f.point, borderColor: palette.accent, backgroundColor: 'transparent', borderWidth: 2, pointRadius: 0, tension: 0.3 },
-            { label: 'Lower', data: f.lower_bound, borderColor: 'transparent', backgroundColor: 'rgba(37,99,235,0.1)', fill: false, pointRadius: 0 },
+            { label: 'Upper', data: f.upper_bound, borderColor: 'transparent',
+              backgroundColor: 'rgba(37,99,235,0.10)', fill: '+1', pointRadius: 0 },
+            { label: 'Forecast', data: f.point, borderColor: f.color || palette.accent,
+              backgroundColor: 'transparent', borderWidth: 2, pointRadius: 0, tension: 0.3 },
+            { label: 'Lower', data: f.lower_bound, borderColor: 'transparent',
+              backgroundColor: 'rgba(37,99,235,0.10)', fill: false, pointRadius: 0 },
           ],
         },
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.dataset.label}: ${c.parsed.y.toFixed(1)}` } } },
+          plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.dataset.label}: ${c.parsed.y?.toFixed(1) ?? '-'}` } } },
           scales: {
             x: { display: false },
             y: { grid: { color: palette.grid }, ticks: { color: palette.text, font: { size: 9 } } },

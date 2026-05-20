@@ -1,17 +1,13 @@
 /* ============================================================================
-   charts.js — Chart.js v4 renderers
-   Renders: prices (indexed line), positioning (bubble), positions (area),
-            narratives (bar), entities (bar)
+   charts.js — Chart.js v4 renderers (prices, positioning, positions,
+   entities, narratives). EI-specific charts live in ei-modules.js.
    ============================================================================ */
 
 const Charts = (() => {
 
   const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const palette = {
-    bullish: '#16a34a',
-    bearish: '#dc2626',
-    neutral: '#ca8a04',
-    accent: '#2563eb',
+    bullish: '#16a34a', bearish: '#dc2626', neutral: '#ca8a04', accent: '#2563eb',
     grid: isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.05)',
     text: isDark ? '#cbd5e1' : '#475569',
   };
@@ -21,16 +17,13 @@ const Charts = (() => {
     trade: '#ea580c', disease: '#dc2626', 'M&A': '#7c3aed', geopolitics: '#525252',
   };
   const categoryColors = {
-    phosphate_suppliers: '#3b82f6',
-    additive_suppliers:  '#16a34a',
-    integrators:         '#ea580c',
-    other:               '#94a3b8',
+    phosphate_suppliers: '#3b82f6', additive_suppliers: '#16a34a',
+    integrators: '#ea580c', other: '#94a3b8',
   };
 
   function commonOptions() {
     return {
-      responsive: true,
-      maintainAspectRatio: false,
+      responsive: true, maintainAspectRatio: false,
       plugins: { legend: { labels: { color: palette.text, font: { size: 11 } } } },
     };
   }
@@ -39,12 +32,10 @@ const Charts = (() => {
   function renderPrices(pricesData) {
     const ctx = document.getElementById('chart-prices');
     if (!ctx || !pricesData || !pricesData.series) return;
-
     const series = pricesData.series;
     const symbols = Object.keys(series);
     if (!symbols.length) return;
 
-    // Use the longest date axis as reference
     let allDates = [];
     symbols.forEach(s => { if (series[s].dates.length > allDates.length) allDates = series[s].dates; });
 
@@ -56,13 +47,8 @@ const Charts = (() => {
       return {
         label: s.name,
         data: s.dates.map((d, i) => ({ x: d, y: indexed[i] })),
-        borderColor: s.color,
-        backgroundColor: s.color + '20',
-        tension: 0.25,
-        borderWidth: 2,
-        pointRadius: 0,
-        pointHoverRadius: 4,
-        fill: false,
+        borderColor: s.color, backgroundColor: s.color + '20',
+        tension: 0.25, borderWidth: 2, pointRadius: 0, pointHoverRadius: 4, fill: false,
       };
     }).filter(Boolean);
 
@@ -73,23 +59,14 @@ const Charts = (() => {
         ...commonOptions(),
         parsing: false,
         scales: {
-          x: {
-            type: 'category',
-            labels: allDates,
-            grid: { color: palette.grid },
-            ticks: { color: palette.text, font: { size: 10 }, maxTicksLimit: 8 },
-          },
-          y: {
-            grid: { color: palette.grid },
-            ticks: { color: palette.text, font: { size: 10 }, callback: v => v + '' },
-            title: { display: true, text: 'Index (start = 100)', color: palette.text, font: { size: 10 } },
-          },
+          x: { type: 'category', labels: allDates, grid: { color: palette.grid },
+               ticks: { color: palette.text, font: { size: 10 }, maxTicksLimit: 8 } },
+          y: { grid: { color: palette.grid }, ticks: { color: palette.text, font: { size: 10 } },
+               title: { display: true, text: 'Index (start = 100)', color: palette.text, font: { size: 10 } } },
         },
         interaction: { mode: 'index', intersect: false },
-        plugins: {
-          ...commonOptions().plugins,
-          tooltip: { callbacks: { label: c => `${c.dataset.label}: ${c.parsed.y.toFixed(1)}` } },
-        },
+        plugins: { ...commonOptions().plugins,
+          tooltip: { callbacks: { label: c => `${c.dataset.label}: ${c.parsed.y.toFixed(1)}` } } },
       },
     });
   }
@@ -99,27 +76,20 @@ const Charts = (() => {
     const ctx = document.getElementById('chart-positioning');
     if (!ctx || !points || !points.length) return;
 
-    // Group by category for color coding
     const grouped = {};
     points.forEach(p => {
       const cat = p.category || 'other';
-      if (!grouped[cat]) grouped[cat] = [];
-      grouped[cat].push({
-        x: p.mentions,
-        y: p.sentiment,
-        r: Math.max(5, Math.min(28, Math.sqrt(p.weighted_impact) * 3)),
-        company: p.company,
-        mentions: p.mentions,
-        sentiment: p.sentiment,
+      (grouped[cat] = grouped[cat] || []).push({
+        x: p.mentions, y: p.sentiment,
+        r: Math.max(5, Math.min(28, Math.sqrt(p.weighted_impact || p.mentions) * 3)),
+        company: p.company, mentions: p.mentions, sentiment: p.sentiment,
       });
     });
 
     const datasets = Object.entries(grouped).map(([cat, data]) => ({
-      label: cat.replace(/_/g, ' '),
-      data,
+      label: cat.replace(/_/g, ' '), data,
       backgroundColor: (categoryColors[cat] || palette.accent) + '99',
-      borderColor: categoryColors[cat] || palette.accent,
-      borderWidth: 1.5,
+      borderColor: categoryColors[cat] || palette.accent, borderWidth: 1.5,
     }));
 
     new Chart(ctx, {
@@ -129,25 +99,13 @@ const Charts = (() => {
         ...commonOptions(),
         plugins: {
           legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: c => `${c.raw.company}: ${c.raw.mentions} mentions, sentiment ${c.raw.sentiment.toFixed(2)}`,
-            },
-          },
+          tooltip: { callbacks: { label: c => `${c.raw.company}: ${c.raw.mentions} mentions, sentiment ${c.raw.sentiment.toFixed(2)}` } },
         },
         scales: {
-          x: {
-            grid: { color: palette.grid },
-            ticks: { color: palette.text, font: { size: 10 } },
-            title: { display: true, text: 'Share of voice (mentions)', color: palette.text, font: { size: 11 } },
-            beginAtZero: true,
-          },
-          y: {
-            grid: { color: palette.grid },
-            ticks: { color: palette.text, font: { size: 10 } },
-            title: { display: true, text: 'Sentiment (−1 bearish → +1 bullish)', color: palette.text, font: { size: 11 } },
-            min: -1.1, max: 1.1,
-          },
+          x: { grid: { color: palette.grid }, ticks: { color: palette.text, font: { size: 10 } },
+               title: { display: true, text: 'Share of voice (mentions)', color: palette.text, font: { size: 11 } }, beginAtZero: true },
+          y: { grid: { color: palette.grid }, ticks: { color: palette.text, font: { size: 10 } },
+               title: { display: true, text: 'Sentiment (−1 → +1)', color: palette.text, font: { size: 11 } }, min: -1.1, max: 1.1 },
         },
       },
     });
@@ -156,7 +114,7 @@ const Charts = (() => {
   // -------------------- Positions stacked area --------------------
   function renderPositions(timeseries) {
     const ctx = document.getElementById('chart-positions');
-    if (!ctx) return;
+    if (!ctx || !timeseries) return;
     const labels = timeseries.dates.map(d => d.slice(5));
     new Chart(ctx, {
       type: 'line',
@@ -182,24 +140,20 @@ const Charts = (() => {
   // -------------------- Top entities horizontal bar --------------------
   function renderEntities(entities) {
     const ctx = document.getElementById('chart-entities');
-    if (!ctx) return;
+    if (!ctx || !entities) return;
     const top = entities.slice(0, 15);
     new Chart(ctx, {
       type: 'bar',
       data: {
         labels: top.map(e => e.company),
         datasets: [{
-          label: 'Mentions (30d)',
-          data: top.map(e => e.mentions_30d),
-          backgroundColor: top.map(e =>
-            e.sentiment_avg > 0.2 ? palette.bullish :
-            e.sentiment_avg < -0.2 ? palette.bearish : palette.neutral),
+          label: 'Mentions (30d)', data: top.map(e => e.mentions_30d),
+          backgroundColor: top.map(e => e.sentiment_avg > 0.2 ? palette.bullish : e.sentiment_avg < -0.2 ? palette.bearish : palette.neutral),
           borderRadius: 4,
         }],
       },
       options: {
-        ...commonOptions(),
-        indexAxis: 'y',
+        ...commonOptions(), indexAxis: 'y',
         plugins: { legend: { display: false } },
         scales: {
           x: { beginAtZero: true, grid: { color: palette.grid }, ticks: { color: palette.text, font: { size: 10 } } },
@@ -212,19 +166,15 @@ const Charts = (() => {
   // -------------------- Narratives bar --------------------
   function renderNarratives(timeseries) {
     const ctx = document.getElementById('chart-narratives');
-    if (!ctx) return;
+    if (!ctx || !timeseries) return;
     const entries = Object.entries(timeseries.narratives_total || {});
     entries.sort((a, b) => b[1] - a[1]);
     new Chart(ctx, {
       type: 'bar',
       data: {
         labels: entries.map(e => e[0]),
-        datasets: [{
-          label: 'Articles',
-          data: entries.map(e => e[1]),
-          backgroundColor: entries.map(e => narrativeColors[e[0]] || palette.accent),
-          borderRadius: 4,
-        }],
+        datasets: [{ label: 'Articles', data: entries.map(e => e[1]),
+          backgroundColor: entries.map(e => narrativeColors[e[0]] || palette.accent), borderRadius: 4 }],
       },
       options: {
         ...commonOptions(),
