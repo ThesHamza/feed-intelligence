@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-05-20T20:09:58.807976+00:00",
-  "count": 22,
+  "fetched_at": "2026-05-20T20:33:04.624581+00:00",
+  "count": 20,
   "alerts": [
     {
       "body": "FDA",
@@ -28,6 +28,15 @@
       "published_at": "2026-04-09T07:00:00+00:00",
       "topic": "general",
       "severity": "medium"
+    },
+    {
+      "body": "China MARA",
+      "region": "Asia-Pacific",
+      "title": "China's 2026-27 Soybean Import Forecast: Growth Driven by Feed Demand - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZTFsLVNydERleGFIc2c4b0ZGV0VPalg5ZjRKOWp0VzFhdm8zSEE3cFM1RFdzOWNvcmMwQ0psOEY5WEJZdndSWVE1VUtrSFZHd0ZLM1ZEc1JTZGlrZTk4RGlpNWtMYVdfdk5zRmdxaUw4UzBKX21rU1Y5ZlV3ZVVZdjBCOVJNZC1vZ2JkZmFwTEt6dFh6UU14LWtzWkdCWkl6bkUtVA?oc=5",
+      "published_at": "2026-03-24T07:00:00+00:00",
+      "topic": "trade",
+      "severity": "low"
     },
     {
       "body": "China MARA",
@@ -77,15 +86,6 @@
     {
       "body": "China MARA",
       "region": "Asia-Pacific",
-      "title": "China's Shift to Fermented Livestock Feed: Cutting Costs, Reducing Soybean Reliance - News and Statistics - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQQnUtVllvODJpRTM4dmtQYVNFOXk5Z3RXSU1KbEstbHcwVDNEaDhoNTNrUkFEcktNQ1dORlEyT0o0YzRNTV9WaGZ1czUwRGFvZDk5TnRzU3dEbXlPSXRBblo2UGdJSWdSdWR5clQzdkY3SzlKbl9ZcloxeldjdGxIWEpGZEZQdEZrUDRJR2xvYWxGaWwwbEMtdnJmNmoxdkRGZVE?oc=5",
-      "published_at": "2026-04-07T07:00:00+00:00",
-      "topic": "general",
-      "severity": "low"
-    },
-    {
-      "body": "China MARA",
-      "region": "Asia-Pacific",
       "title": "China’s hog surplus, plunging prices muddy tariff solution - The Western Producer",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQVHVVNTdqWG9BeVVuRzAwdHR0aUdQTml6Qk1sRklTSllFR2NzMG1jWUFxWncxY1cwdmdybS1GV1NwS2x5TWh5Ui1CU3p6OGdTOUdKRmRacWhKb0gtcVRLS2FVZU5XM2pXOUFHQ01fc3JvQ2wtN0ctODhWRTk2NUlZS1lWQy0zUEVzOFVDYTRwMV9XdjVs?oc=5",
       "published_at": "2026-04-14T07:00:00+00:00",
@@ -125,15 +125,6 @@
       "title": "SRIS Readiness Intake Form - AAFCO",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9zQ3ZSWW43SGpJbVVYSGRqZ1N6SEM4b3RqV19ldUIxdVRKY2owU2JPTzlEM1VKUHBqQ1ZwS3lCVUdOR2tBUlRQZERrbGgtWXJqb20zNQ?oc=5",
       "published_at": "2026-04-27T13:26:22+00:00",
-      "topic": "general",
-      "severity": "low"
-    },
-    {
-      "body": "FDA",
-      "region": "Americas",
-      "title": "FDA FY26 Grant Funding & Public Info Session for AVICs - fda.gov",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxONVQ3SGhwQXZRTmlhWkwwX3QwV0pnVTNqR3hiVmN6MGxDaHYwNFlZUjlfNW5HcVR1RUJ5aTdrSlVRRFBBVUdpNUVBSzkxQ0thNFl2bEgtN0JkTzhKZFRVb0xBYlZqeHgyTzlmRUU5U0ZNUjRFWW1aWlVuTWs2azM3SVlkejg1bGVVZlhUWnc2ODgtV2lRc2RyQUoyTTdGbUVmRlZXbEl5ZDdrUG16SlduekZ0WnlNc09JRDF2ODk2U2o1QzZsR3NiTTlHcGVMaDNDNVFDR3BXNWM1a2VGSEVBUnhR?oc=5",
-      "published_at": "2026-05-04T07:00:00+00:00",
       "topic": "general",
       "severity": "low"
     },
@@ -190,32 +181,23 @@
       "published_at": "2026-05-13T17:25:20+00:00",
       "topic": "general",
       "severity": "low"
-    },
-    {
-      "body": "China MARA",
-      "region": "Asia-Pacific",
-      "title": "China Dog Supplements - Market Analysis, Forecast, Size, Trends and Insights - IndexBox",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWHJDUjZrRjktMUpabkkxdGpQU1JEblBJOXJxNWJpMEZxWUhralEyME1ZVEtWRnZvdTJjUGwyNDgtWC1yYWxMRHZ4eU1ybVNlb1Ewb0d5N2daczBRY2NDZTlDaEt5QjZ6WUxyREdZbWdhbW5XQTFCSEJwSGJkV1A1dzlOUk5JNldoTk1naXVyTkVKcTZac0VRMThBYktMMXU1Ti1uYQ?oc=5",
-      "published_at": "2026-05-17T00:14:03+00:00",
-      "topic": "general",
-      "severity": "low"
     }
   ],
   "by_region": {
-    "Americas": 8,
-    "Asia-Pacific": 8,
+    "Americas": 7,
+    "Asia-Pacific": 7,
     "Global": 3,
     "Europe": 3
   },
   "by_severity": {
     "high": 2,
     "medium": 1,
-    "low": 19
+    "low": 17
   },
   "by_topic": {
     "safety": 2,
-    "general": 15,
-    "trade": 2,
+    "general": 12,
+    "trade": 3,
     "additives": 2,
     "heavy_metals": 1
   }

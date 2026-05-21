@@ -411,3 +411,136 @@ td.title a:hover { color: var(--accent); text-decoration: underline; }
   th, td { padding: 0.5rem 0.5rem; }
   .dash-nav { top: 75px; }
 }
+
+/* =============================================================================
+   info-export.js — Interactive legends + data export/consultation
+   ============================================================================= */
+
+.ie-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.125rem;
+}
+.ie-title-row h2 { margin-bottom: 0 !important; }
+
+.ie-toolbar { display: flex; gap: 0.5rem; align-items: center; flex-shrink: 0; }
+
+.ie-btn {
+  background: var(--bg-subtle);
+  color: var(--text-soft);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.ie-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.ie-info-btn { font-size: 0.95rem; line-height: 1; padding: 0.2rem 0.5rem; }
+
+/* Info popover */
+.ie-info-wrap, .ie-export-wrap { position: relative; }
+.ie-popover {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 360px;
+  max-width: 86vw;
+  background: var(--bg-elev);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  padding: 0.875rem 1rem;
+  z-index: 100;
+  text-align: left;
+}
+.ie-popover.open { display: block; }
+.ie-popover h4 { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text); }
+.ie-popover p { font-size: 0.75rem; line-height: 1.5; color: var(--text-soft); margin-bottom: 0.5rem; }
+.ie-popover p:last-child { margin-bottom: 0; }
+.ie-pop-label { font-weight: 600; color: var(--accent); }
+
+/* Export menu */
+.ie-export-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  padding: 0.375rem;
+  z-index: 100;
+}
+.ie-export-menu.open { display: block; }
+.ie-export-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--text-soft);
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8125rem;
+  font-family: inherit;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.ie-export-menu button:hover { background: var(--bg-subtle); color: var(--text); }
+
+/* Modal */
+.ie-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.ie-modal {
+  background: var(--bg-elev);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+.ie-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.ie-modal-header h3 { font-size: 1rem; font-weight: 600; }
+.ie-modal-close {
+  background: transparent; border: none; color: var(--text-muted);
+  font-size: 1.5rem; line-height: 1; cursor: pointer; padding: 0 0.25rem;
+}
+.ie-modal-close:hover { color: var(--text); }
+.ie-modal-body { overflow: auto; padding: 1rem 1.25rem; }
+.ie-modal-body pre {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--text-soft);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 720px) {
+  .ie-title-row { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .ie-popover { width: 86vw; }
+}

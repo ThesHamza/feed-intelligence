@@ -1,116 +1,153 @@
 {
-  "fetched_at": "2026-05-20T20:03:43.468277+00:00",
-  "hs_codes": [
-    "2510",
-    "2835",
-    "2309"
-  ],
-  "total_value_usd": 4185000000,
-  "by_hs_code": {
-    "2510": 1800000000,
-    "2835": 1500000000,
-    "2309": 885000000
+  "fetched_at": "2026-05-20T20:33:40.937914+00:00",
+  "hs_codes": {
+    "2510": "Phosphate rock",
+    "2835": "Phosphates (incl. feed phosphates)",
+    "280910": "Phosphoric acid"
   },
+  "by_country": {
+    "Morocco": {
+      "iso_num": "504",
+      "total_usd": {
+        "2510": 959914800.402,
+        "2835": 0,
+        "280910": 0
+      },
+      "grand_total_usd": 959914800.402,
+      "year": 2024
+    },
+    "Tunisia": {
+      "iso_num": "788",
+      "total_usd": {
+        "2510": 0,
+        "2835": 120752332.548,
+        "280910": 0
+      },
+      "grand_total_usd": 120752332.548,
+      "year": 2024
+    },
+    "Kazakhstan": {
+      "iso_num": "398",
+      "total_usd": {
+        "2510": 85412535.14,
+        "2835": 0,
+        "280910": 0
+      },
+      "grand_total_usd": 85412535.14,
+      "year": 2024
+    },
+    "China": {
+      "iso_num": "156",
+      "total_usd": {
+        "2510": 18248610,
+        "2835": 0,
+        "280910": 31077665
+      },
+      "grand_total_usd": 49326275,
+      "year": 2024
+    },
+    "Brazil": {
+      "iso_num": "076",
+      "total_usd": {
+        "2510": 0,
+        "2835": 30082640,
+        "280910": 0
+      },
+      "grand_total_usd": 30082640,
+      "year": 2024
+    },
+    "Saudi Arabia": {
+      "iso_num": "682",
+      "total_usd": {
+        "2510": 498.133,
+        "2835": 0,
+        "280910": 0
+      },
+      "grand_total_usd": 498.133,
+      "year": 2024
+    },
+    "Russia": {
+      "iso_num": "643",
+      "total_usd": {
+        "2510": 0,
+        "2835": 0,
+        "280910": 0
+      },
+      "grand_total_usd": 0,
+      "year": null
+    },
+    "India": {
+      "iso_num": "356",
+      "total_usd": {
+        "2510": 0,
+        "2835": 0,
+        "280910": 0
+      },
+      "grand_total_usd": 0,
+      "year": null
+    },
+    "USA": {
+      "iso_num": "840",
+      "total_usd": {
+        "2510": 0,
+        "2835": 0,
+        "280910": 0
+      },
+      "grand_total_usd": 0,
+      "year": null
+    }
+  },
+  "by_hs_code": {
+    "2510": 1063576443.675,
+    "2835": 150834972.54799998,
+    "280910": 31077665
+  },
+  "total_value_usd": 1245489081.223,
   "top_exporters": [
     {
       "country": "Morocco",
-      "value_usd": 1650000000,
-      "year": 2023
-    },
-    {
-      "country": "Russia",
-      "value_usd": 720000000,
-      "year": 2023
-    },
-    {
-      "country": "USA",
-      "value_usd": 580000000,
-      "year": 2023
-    },
-    {
-      "country": "China",
-      "value_usd": 510000000,
-      "year": 2023
+      "value_usd": 959914800.402,
+      "year": 2024
     },
     {
       "country": "Tunisia",
-      "value_usd": 280000000,
-      "year": 2023
+      "value_usd": 120752332.548,
+      "year": 2024
     },
     {
-      "country": "Jordan",
-      "value_usd": 180000000,
-      "year": 2023
+      "country": "Kazakhstan",
+      "value_usd": 85412535.14,
+      "year": 2024
     },
     {
-      "country": "Israel",
-      "value_usd": 145000000,
-      "year": 2023
-    },
-    {
-      "country": "Saudi Arabia",
-      "value_usd": 120000000,
-      "year": 2023
-    }
-  ],
-  "period": "2023",
-  "top_importers": [
-    {
-      "country": "India",
-      "value_usd": 850000000,
-      "year": 2023
+      "country": "China",
+      "value_usd": 49326275,
+      "year": 2024
     },
     {
       "country": "Brazil",
-      "value_usd": 620000000,
-      "year": 2023
+      "value_usd": 30082640,
+      "year": 2024
+    },
+    {
+      "country": "Saudi Arabia",
+      "value_usd": 498.133,
+      "year": 2024
+    },
+    {
+      "country": "Russia",
+      "value_usd": 0,
+      "year": null
+    },
+    {
+      "country": "India",
+      "value_usd": 0,
+      "year": null
     },
     {
       "country": "USA",
-      "value_usd": 480000000,
-      "year": 2023
-    },
-    {
-      "country": "Indonesia",
-      "value_usd": 340000000,
-      "year": 2023
-    },
-    {
-      "country": "Mexico",
-      "value_usd": 290000000,
-      "year": 2023
-    }
-  ],
-  "key_corridors": [
-    {
-      "from": "Morocco",
-      "to": "India",
-      "value_usd": 425000000,
-      "yoy_pct": 22.5
-    },
-    {
-      "from": "Morocco",
-      "to": "Brazil",
-      "value_usd": 280000000,
-      "yoy_pct": 8.3
-    },
-    {
-      "from": "Russia",
-      "to": "Brazil",
-      "value_usd": 195000000,
-      "yoy_pct": -12.8
-    },
-    {
-      "from": "USA",
-      "to": "Mexico",
-      "value_usd": 175000000,
-      "yoy_pct": 5.2
-    },
-    {
-      "from": "Morocco",
-      "to": "Indonesia",
-      "value_usd": 145000000,
-      "yoy_pct": 31.4
+      "value_usd": 0,
+      "year": null
     }
   ]
 }

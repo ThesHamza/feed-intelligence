@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-05-20T20:09:58.957406+00:00",
+  "computed_at": "2026-05-21T09:21:44.969456+00:00",
   "horizon_days": 30,
   "method": "Holt double exponential smoothing",
   "forecasts": {
