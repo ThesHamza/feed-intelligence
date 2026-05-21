@@ -11,6 +11,20 @@
   // Explanations per section id. Each: what it shows, source, how to read it.
   // --------------------------------------------------------------------------
   const LEGENDS = {
+    'brief': {
+      title: 'Executive Brief — le "so what"',
+      what: 'Synthèse décisionnelle quotidienne : les 3-5 choses qui comptent aujourd\'hui, avec leur implication business pour OCP et une action suggérée.',
+      source: 'Généré par IA (Gemini) à partir de l\'agrégation de tous les signaux du dashboard (tension, réglementaire, concurrents, flux, prix, signaux faibles). Bascule sur des règles déterministes si l\'IA est indisponible.',
+      read: 'Chaque item suit la logique Fait → Implication (→) → Action. Le badge de priorité (high/medium/low) hiérarchise. C\'est la couche qui transforme la donnée en décision.',
+      dataKey: 'brief',
+    },
+    'feed-proxies': {
+      title: 'Proxies de prix feed phosphates',
+      what: 'Indicateurs de prix amont du complexe phosphate, utilisés comme proxies directionnels des prix feed phosphates (MCP/MDCP/DCP), qui sont eux propriétaires (Feedinfo, payant).',
+      source: 'World Bank Pink Sheet (gratuit, mensuel) : phosphate rock FOB Afrique du Nord, DAP, TSP, urée.',
+      read: 'ATTENTION : ce sont des proxies engrais/amont, pas les vrais prix feed-grade. La corrélation est directionnelle (tendance), pas exacte — les producteurs chinois fixent le plancher feed indépendamment. Pour les vrais prix MCP/DCP, un abonnement Feedinfo/Argus reste nécessaire.',
+      dataKey: 'feed_proxies',
+    },
     'tension': {
       title: 'Market Tension Index',
       what: 'Indice composite 0-100 résumant le niveau de tension global du marché des feed phosphates.',
@@ -262,9 +276,10 @@
     Object.keys(LEGENDS).forEach(id => {
       const section = document.getElementById(id);
       if (!section) return;
-      const h2 = section.querySelector('h2');
+      let h2 = section.querySelector('h2');
+      // Brief section has no static h2 (content injected later) — skip toolbar,
+      // its explanation is self-contained in the card.
       if (!h2) return;
-      // Wrap h2 in a flex row with the toolbar
       const toolbar = buildToolbar(section, id, LEGENDS[id]);
       h2.style.display = 'inline-block';
       const row = document.createElement('div');

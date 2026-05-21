@@ -25,9 +25,11 @@
   <!-- NAV -->
   <nav class="dash-nav">
     <div class="container nav-inner">
+      <a href="#brief">Brief</a>
       <a href="#tension">Tension</a>
       <a href="#signals">Signals</a>
       <a href="#prices">Prices</a>
+      <a href="#feed-proxies">Feed proxies</a>
       <a href="#forecasts">Forecasts</a>
       <a href="#competitors">Competitors</a>
       <a href="#regulatory">Regulatory</a>
@@ -49,6 +51,11 @@
       <div class="kpi-card"><div class="kpi-label">Reg. alerts</div><div class="kpi-value" id="kpi-regulatory">—</div><div class="kpi-sub">last 30 days</div></div>
       <div class="kpi-card"><div class="kpi-label">Patents tracked</div><div class="kpi-value" id="kpi-patents">—</div><div class="kpi-sub">recent filings</div></div>
       <div class="kpi-card"><div class="kpi-label">AI confidence</div><div class="kpi-value" id="kpi-confidence">—</div><div class="kpi-sub">avg score</div></div>
+    </section>
+
+    <!-- ================ EXECUTIVE BRIEF (so what) ================ -->
+    <section class="card brief-card" id="brief">
+      <div id="exec-brief"><p style="color:var(--text-muted);padding:1rem">Génération du brief…</p></div>
     </section>
 
     <!-- ================ MARKET TENSION INDEX ================ -->
@@ -86,6 +93,19 @@
         <div id="prices-summary" class="prices-summary"></div>
       </div>
       <div class="chart-wrap chart-wrap-tall"><canvas id="chart-prices"></canvas></div>
+    </section>
+
+    <!-- ================ FEED PHOSPHATE PROXIES ================ -->
+    <section class="card" id="feed-proxies">
+      <div class="card-header-row">
+        <div>
+          <h2>Feed phosphate price proxies</h2>
+          <p class="card-sub">Indexés à 100. Phosphate rock, DAP, TSP, urée — proxies amont mensuels. <em>World Bank Pink Sheet (gratuit).</em></p>
+        </div>
+        <div id="proxies-summary" class="prices-summary"></div>
+      </div>
+      <div class="chart-wrap chart-wrap-tall"><canvas id="chart-proxies"></canvas></div>
+      <p id="proxies-caveat" class="proxies-caveat"></p>
     </section>
 
     <!-- ================ FORECASTS ================ -->
@@ -250,6 +270,7 @@
   <script src="assets/heatmap.js"></script>
   <script src="assets/ei-modules.js"></script>
   <script src="assets/stakeholders.js"></script>
+  <script src="assets/brief.js"></script>
   <script src="assets/dashboard.js"></script>
   <script src="assets/info-export.js"></script>
 </body>

@@ -1,0 +1,31 @@
+{
+  "headline": "Un signal majeur à traiter, dans un contexte de marché à surveiller.",
+  "items": [
+    {
+      "insight": "Alerte réglementaire (FDA, Americas) : Pharmacal Issues Nationwide Recall of MG217 Multi-Symptom Treatment Cream & Skin Protectant Eczema Cream Due to Microbial Contamination - fda.gov.",
+      "implication": "Impact potentiel sur les spécifications produit ou l'accès marché — la roche marocaine peut être un avantage si déjà conforme.",
+      "action": "Valider la conformité des grades export concernés avec les futures exigences.",
+      "priority": "high"
+    },
+    {
+      "insight": "Pic d'attention anormal sur other (commodity, z=22.0σ).",
+      "implication": "Possible déplacement de demande ou événement émergent à anticiper avant les concurrents.",
+      "action": "Investiguer la cause du pic sur other et évaluer l'exposition OCP.",
+      "priority": "medium"
+    },
+    {
+      "insight": "Exportateurs concurrents (Russie/Tunisie) sous pression sur les volumes.",
+      "implication": "Parts de marché potentiellement disponibles sur les corridors Atlantique et Asie pour OCP.",
+      "action": "Prioriser l'effort commercial sur les marchés desservis par ces concurrents fragilisés.",
+      "priority": "medium"
+    },
+    {
+      "insight": "Phosphate rock (proxy upstream) en stabilité de -1.4% sur 3 mois.",
+      "implication": "Indicateur directionnel du coût amont — influence la structure de marge des feed phosphates OCP.",
+      "action": "Intégrer cette tendance dans les projections de pricing trimestrielles.",
+      "priority": "low"
+    }
+  ],
+  "generated_by": "Rules (LLM unavailable)",
+  "generated_at": "2026-05-21T09:51:55.699104+00:00"
+}

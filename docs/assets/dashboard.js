@@ -15,7 +15,7 @@
     prices, positioning, heatmap, signals,
     // v3 additions
     competitors, regulatory, weakSignals, tension,
-    tradeFlows, geopolitics, patents, forecasts, stakeholders,
+    tradeFlows, geopolitics, patents, forecasts, stakeholders, brief, feedProxies,
   ] = await Promise.all([
     fetchJSON('articles.json', []),
     fetchJSON('entities.json', []),
@@ -34,10 +34,18 @@
     fetchJSON('patents.json', null),
     fetchJSON('forecasts.json', null),
     fetchJSON('stakeholders.json', null),
+    fetchJSON('brief.json', null),
+    fetchJSON('feed_proxies.json', null),
   ]);
 
   // ============ KPIs ============
   populateKPIs(metadata, articles, signals, weakSignals, regulatory, patents);
+
+  // ============ Executive brief + feed proxies (NEW) ============
+  if (typeof Brief !== 'undefined') {
+    Brief.renderBrief(brief);
+    Brief.renderProxies(feedProxies);
+  }
 
   // ============ v3 NEW: render in display order ============
   EI.renderTension(tension);

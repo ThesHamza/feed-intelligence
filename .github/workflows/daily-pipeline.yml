@@ -58,8 +58,10 @@ jobs:
           python -m pipeline.step_13_patents
           python -m pipeline.step_14_forecasts
           python -m pipeline.step_15_stakeholders
+          python -m pipeline.step_16_feed_proxies || echo "Feed proxies skipped (Pink Sheet unreachable)"
           python -m pipeline.step_06_export
           python -m pipeline.step_10_weak_signals
+          python -m pipeline.step_17_brief
 
       - name: Commit & push updates
         run: |
